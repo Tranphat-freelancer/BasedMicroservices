@@ -13,8 +13,6 @@
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
     <PackageReference Include="IdentityModel" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.5" />
-    <PackageReference Include="Microsoft.AspNetCore.DataProtection.StackExchangeRedis" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5" />
     <PackageReference Include="Volo.Abp.Autofac" Version="5.3.1" />
     <PackageReference Include="Volo.Abp.Caching.StackExchangeRedis" Version="5.3.1" />
@@ -29,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
     <ProjectReference Include="..\..\src\Based.SaaSService.HttpApi\Based.SaaSService.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Based.SaaSService.Application\Based.SaaSService.Application.csproj" />
     <ProjectReference Include="..\..\src\Based.SaaSService.EntityFrameworkCore\Based.SaaSService.EntityFrameworkCore.csproj" />
