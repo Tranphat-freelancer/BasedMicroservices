@@ -1,4 +1,5 @@
 using Based.IdentityService.EntityFrameworkCore;
+using Based.Shared.Hosting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -11,18 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Volo.Abp;
-using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
-using Volo.Abp.AspNetCore.Serilog;
-using Volo.Abp.AuditLogging.EntityFrameworkCore;
-using Volo.Abp.Autofac;
 using Volo.Abp.Caching;
-using Volo.Abp.Caching.StackExchangeRedis;
-using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.Modularity;
-using Volo.Abp.PermissionManagement.EntityFrameworkCore;
-using Volo.Abp.SettingManagement.EntityFrameworkCore;
-using Volo.Abp.Swashbuckle;
-using Volo.Abp.TenantManagement.EntityFrameworkCore;
 
 namespace Based.IdentityService;
 
@@ -30,16 +21,7 @@ namespace Based.IdentityService;
     typeof(IdentityServiceApplicationModule),
     typeof(IdentityServiceEntityFrameworkCoreModule),
     typeof(IdentityServiceHttpApiModule),
-    typeof(AbpAspNetCoreMvcUiMultiTenancyModule),
-    typeof(AbpAutofacModule),
-    typeof(AbpCachingStackExchangeRedisModule),
-    typeof(AbpEntityFrameworkCoreSqlServerModule),
-    typeof(AbpAuditLoggingEntityFrameworkCoreModule),
-    typeof(AbpPermissionManagementEntityFrameworkCoreModule),
-    typeof(AbpSettingManagementEntityFrameworkCoreModule),
-    typeof(AbpTenantManagementEntityFrameworkCoreModule),
-    typeof(AbpAspNetCoreSerilogModule),
-    typeof(AbpSwashbuckleModule)
+    typeof(BasedHostingModule)
     )]
 public class IdentityServiceHttpApiHostModule : AbpModule
 {

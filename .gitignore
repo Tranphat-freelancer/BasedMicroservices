@@ -258,3 +258,4 @@ FodyWeavers.xml
 FodyWeavers.xsd
 yarn.lock
 *.bak
+*.jwk
