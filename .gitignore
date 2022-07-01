@@ -257,3 +257,4 @@ paket-files/
 FodyWeavers.xml
 FodyWeavers.xsd
 yarn.lock
+*.bak
