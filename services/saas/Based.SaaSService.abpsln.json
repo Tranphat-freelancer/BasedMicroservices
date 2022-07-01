@@ -1,0 +1,7 @@
+{
+  "modules": {
+    "Based.SaaSService": {
+      "path": "Based.SaaSService.abpmdl.json"
+    }
+  }
+}

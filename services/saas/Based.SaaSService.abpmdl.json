@@ -1,0 +1,79 @@
+{
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {},
+      "host": {}
+    }
+  },
+  "packages": {
+    "Based.SaaSService.Domain.Shared": {
+      "path": "src/Based.SaaSService.Domain.Shared/Based.SaaSService.Domain.Shared.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.Domain": {
+      "path": "src/Based.SaaSService.Domain/Based.SaaSService.Domain.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.Application.Contracts": {
+      "path": "src/Based.SaaSService.Application.Contracts/Based.SaaSService.Application.Contracts.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.Application": {
+      "path": "src/Based.SaaSService.Application/Based.SaaSService.Application.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.EntityFrameworkCore": {
+      "path": "src/Based.SaaSService.EntityFrameworkCore/Based.SaaSService.EntityFrameworkCore.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.MongoDB": {
+      "path": "src/Based.SaaSService.MongoDB/Based.SaaSService.MongoDB.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.HttpApi": {
+      "path": "src/Based.SaaSService.HttpApi/Based.SaaSService.HttpApi.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.HttpApi.Client": {
+      "path": "src/Based.SaaSService.HttpApi.Client/Based.SaaSService.HttpApi.Client.abppkg.json",
+      "folder": "src"
+    },
+    "Based.SaaSService.TestBase": {
+      "path": "test/Based.SaaSService.TestBase/Based.SaaSService.TestBase.abppkg.json",
+      "folder": "test"
+    },
+    "Based.SaaSService.EntityFrameworkCore.Tests": {
+      "path": "test/Based.SaaSService.EntityFrameworkCore.Tests/Based.SaaSService.EntityFrameworkCore.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Based.SaaSService.MongoDB.Tests": {
+      "path": "test/Based.SaaSService.MongoDB.Tests/Based.SaaSService.MongoDB.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Based.SaaSService.Domain.Tests": {
+      "path": "test/Based.SaaSService.Domain.Tests/Based.SaaSService.Domain.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Based.SaaSService.Application.Tests": {
+      "path": "test/Based.SaaSService.Application.Tests/Based.SaaSService.Application.Tests.abppkg.json",
+      "folder": "test"
+    },
+    "Based.SaaSService.HttpApi.Host": {
+      "path": "host/Based.SaaSService.HttpApi.Host/Based.SaaSService.HttpApi.Host.abppkg.json",
+      "folder": "host"
+    },
+    "Based.SaaSService.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/Based.SaaSService.HttpApi.Client.ConsoleTestApp/Based.SaaSService.HttpApi.Client.ConsoleTestApp.abppkg.json",
+      "folder": "test"
+    },
+    "Based.SaaSService.IdentityServer": {
+      "path": "host/Based.SaaSService.IdentityServer/Based.SaaSService.IdentityServer.abppkg.json",
+      "folder": "host"
+    },
+    "Based.SaaSService.Host.Shared": {
+      "path": "host/Based.SaaSService.Host.Shared/Based.SaaSService.Host.Shared.abppkg.json",
+      "folder": "host"
+    }
+  }
+}
