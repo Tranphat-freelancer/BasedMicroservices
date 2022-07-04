@@ -21,7 +21,7 @@ public class IdentityServiceEntityFrameworkCoreModule : AbpModule
         {
             options.UseSqlServer();
         });
-        AppContext.SetSwitch("SqlServer.EnableLegacyTimestampBehavior", true);
+        //AppContext.SetSwitch("SqlServer.EnableLegacyTimestampBehavior", true);
         context.Services.AddAbpDbContext<IdentityServiceDbContext>(options =>
         {
             options.ReplaceDbContext<IIdentityDbContext>();

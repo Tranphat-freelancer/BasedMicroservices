@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
@@ -10,15 +11,20 @@ namespace Based.SaaSService.EntityFrameworkCore;
     typeof(AbpEntityFrameworkCoreModule)
 )]
 [DependsOn(typeof(AbpTenantManagementEntityFrameworkCoreModule))]
-    public class SaaSServiceEntityFrameworkCoreModule : AbpModule
+public class SaaSServiceEntityFrameworkCoreModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
+        Configure<AbpDbContextOptions>(options =>
+        {
+            options.UseSqlServer();
+        });
+        AppContext.SetSwitch("SqlServer.EnableLegacyTimestampBehavior", true);
+
         context.Services.AddAbpDbContext<SaaSServiceDbContext>(options =>
         {
-                /* Add custom repositories here. Example:
-                 * options.AddRepository<Question, EfCoreQuestionRepository>();
-                 */
+            options.ReplaceDbContext<ITenantManagementDbContext>();
+            options.AddDefaultRepositories(true);
         });
     }
 }

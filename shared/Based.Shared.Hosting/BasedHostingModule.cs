@@ -46,7 +46,7 @@ public class BasedHostingModule : AbpModule
                 database.IsUsedByTenants = false;
             });
 
-            options.Databases.Configure("AdministrationService", database =>
+            options.Databases.Configure("AdminService", database =>
             {
                 database.MappedConnections.Add("AbpAuditLogging");
                 database.MappedConnections.Add("AbpPermissionManagement");

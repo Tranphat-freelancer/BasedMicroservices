@@ -259,3 +259,4 @@ FodyWeavers.xsd
 yarn.lock
 *.bak
 *.jwk
+*.rsa
