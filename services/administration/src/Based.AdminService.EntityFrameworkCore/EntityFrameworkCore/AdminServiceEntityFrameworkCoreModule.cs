@@ -34,7 +34,7 @@ public class AdminServiceEntityFrameworkCoreModule : AbpModule
             options.ReplaceDbContext<IFeatureManagementDbContext>();
             options.ReplaceDbContext<IAuditLoggingDbContext>();
 
-            options.AddDefaultRepositories(true);
+            options.AddDefaultRepositories(includeAllEntities: true);
         });
     }
 }

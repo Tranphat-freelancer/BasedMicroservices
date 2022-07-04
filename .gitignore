@@ -261,3 +261,4 @@ yarn.lock
 *.jwk
 *.rsa
 /apps/Based.IdentityServer/wwwroot/libs
+/apps/Based.Web/wwwroot/libs

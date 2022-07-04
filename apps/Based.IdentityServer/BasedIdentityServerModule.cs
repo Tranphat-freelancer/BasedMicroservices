@@ -33,7 +33,7 @@ namespace Based;
     typeof(AdminServiceEntityFrameworkCoreModule),
     typeof(SaaSServiceEntityFrameworkCoreModule),
     typeof(IdentityServiceEntityFrameworkCoreModule),
-    typeof(BasedHostingModule)
+    typeof(SharedHostingModule)
     )]
 public class BasedIdentityServerModule : AbpModule
 {

@@ -16,15 +16,14 @@ namespace Based.Shared.Hosting;
 [DependsOn(
     typeof(AbpAutofacModule),
     typeof(AbpDataModule),
-    typeof(AbpCachingStackExchangeRedisModule),
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpAspNetCoreMultiTenancyModule),
     typeof(AbpSwashbuckleModule),
-    //typeof(AbpEventBusRabbitMqModule),
     typeof(AbpEntityFrameworkCoreModule),
+    typeof(AbpCachingStackExchangeRedisModule),
     typeof(AbpEntityFrameworkCoreSqlServerModule)
 )]
-public class BasedHostingModule : AbpModule
+public class SharedHostingModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

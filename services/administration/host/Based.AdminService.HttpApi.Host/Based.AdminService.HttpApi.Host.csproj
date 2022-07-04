@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
+    <ProjectReference Include="..\..\..\..\Based.Shared.Microservices\Based.Shared.Microservices.csproj" />
     <ProjectReference Include="..\..\src\Based.AdminService.HttpApi\Based.AdminService.HttpApi.csproj" />
     <ProjectReference Include="..\..\src\Based.AdminService.Application\Based.AdminService.Application.csproj" />
     <ProjectReference Include="..\..\src\Based.AdminService.EntityFrameworkCore\Based.AdminService.EntityFrameworkCore.csproj" />

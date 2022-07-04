@@ -21,7 +21,7 @@ namespace Based.SaaSService;
     typeof(SaaSServiceApplicationModule),
     typeof(SaaSServiceEntityFrameworkCoreModule),
     typeof(SaaSServiceHttpApiModule),
-    typeof(BasedHostingModule)
+    typeof(SharedHostingModule)
     )]
 public class SaaSServiceHttpApiHostModule : AbpModule
 {

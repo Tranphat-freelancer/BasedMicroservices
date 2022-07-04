@@ -21,7 +21,7 @@ namespace Based.IdentityService;
     typeof(IdentityServiceApplicationModule),
     typeof(IdentityServiceEntityFrameworkCoreModule),
     typeof(IdentityServiceHttpApiModule),
-    typeof(BasedHostingModule)
+    typeof(SharedHostingModule)
     )]
 public class IdentityServiceHttpApiHostModule : AbpModule
 {

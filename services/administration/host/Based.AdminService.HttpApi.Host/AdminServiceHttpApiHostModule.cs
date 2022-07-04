@@ -1,4 +1,5 @@
 using Based.AdminService.EntityFrameworkCore;
+using Based.Microservice.Shared;
 using Based.Shared.Hosting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -20,8 +21,8 @@ namespace Based.AdminService;
 [DependsOn(
     typeof(AdminServiceApplicationModule),
     typeof(AdminServiceEntityFrameworkCoreModule),
-    typeof(AdminServiceHttpApiModule),
-    typeof(BasedHostingModule)
+    //typeof(AdminServiceHttpApiModule),
+    typeof(SharedMicroserviceModule)
     )]
 public class AdminServiceHttpApiHostModule : AbpModule
 {
