@@ -20,7 +20,7 @@ namespace Based.Shared.Hosting;
     typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpAspNetCoreMultiTenancyModule),
     typeof(AbpSwashbuckleModule),
-    typeof(AbpEventBusRabbitMqModule),
+    //typeof(AbpEventBusRabbitMqModule),
     typeof(AbpEntityFrameworkCoreModule),
     typeof(AbpEntityFrameworkCoreSqlServerModule)
 )]

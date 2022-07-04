@@ -10,7 +10,7 @@ services:
   project: apps/based.IdentityServer/based.IdentityServer.csproj
   bindings:
     - protocol: https
-      port: 44444
+      port: 5000
 - name: based-gateway
   project: gateway/based.Gateway/based.Gateway.csproj
   bindings:

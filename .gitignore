@@ -260,3 +260,4 @@ yarn.lock
 *.bak
 *.jwk
 *.rsa
+/apps/Based.IdentityServer/wwwroot/libs
