@@ -26,7 +26,6 @@ public class AdminServiceEntityFrameworkCoreModule : AbpModule
             options.UseSqlServer();
         });
 
-        //AppContext.SetSwitch("SqlServer.EnableLegacyTimestampBehavior", true);
         context.Services.AddAbpDbContext<AdminServiceDbContext>(options =>
         {
             options.ReplaceDbContext<IPermissionManagementDbContext>();

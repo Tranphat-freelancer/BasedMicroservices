@@ -1,6 +1,8 @@
 using Based.AdminService.EntityFrameworkCore;
+using Based.IdentityService;
+using Based.IdentityService.EntityFrameworkCore;
 using Based.Microservice.Shared;
-using Based.Shared.Hosting;
+using Based.SaaSService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -19,10 +21,13 @@ using Volo.Abp.Modularity;
 namespace Based.AdminService;
 
 [DependsOn(
+    typeof(SharedMicroserviceModule),
     typeof(AdminServiceApplicationModule),
     typeof(AdminServiceEntityFrameworkCoreModule),
-    //typeof(AdminServiceHttpApiModule),
-    typeof(SharedMicroserviceModule)
+    typeof(AdminServiceHttpApiModule),
+    typeof(IdentityServiceApplicationContractsModule),
+    typeof(IdentityServiceEntityFrameworkCoreModule),
+    typeof(SaaSServiceApplicationContractsModule)
     )]
 public class AdminServiceHttpApiHostModule : AbpModule
 {

@@ -1,5 +1,6 @@
+using Based.AdminService.EntityFrameworkCore;
 using Based.IdentityService.EntityFrameworkCore;
-using Based.Shared.Hosting;
+using Based.Microservice.Shared;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -20,8 +21,9 @@ namespace Based.IdentityService;
 [DependsOn(
     typeof(IdentityServiceApplicationModule),
     typeof(IdentityServiceEntityFrameworkCoreModule),
+    typeof(AdminServiceEntityFrameworkCoreModule),
     typeof(IdentityServiceHttpApiModule),
-    typeof(SharedHostingModule)
+    typeof(SharedMicroserviceModule)
     )]
 public class IdentityServiceHttpApiHostModule : AbpModule
 {

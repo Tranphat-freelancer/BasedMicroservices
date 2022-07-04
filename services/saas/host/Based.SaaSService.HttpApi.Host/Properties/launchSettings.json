@@ -3,8 +3,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:7004",
-      "sslPort": 7004
+      "applicationUrl": "https://localhost:7003",
+      "sslPort": 7003
     }
   },
   "profiles": {
@@ -18,7 +18,7 @@
     "Based.SaaSService": {
       "commandName": "Project",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7004",
+      "applicationUrl": "https://localhost:7003",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

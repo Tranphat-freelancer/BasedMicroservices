@@ -19,7 +19,6 @@ public class SaaSServiceEntityFrameworkCoreModule : AbpModule
         {
             options.UseSqlServer();
         });
-        AppContext.SetSwitch("SqlServer.EnableLegacyTimestampBehavior", true);
 
         context.Services.AddAbpDbContext<SaaSServiceDbContext>(options =>
         {
