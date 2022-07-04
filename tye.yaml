@@ -1,0 +1,33 @@
+# tye application configuration file
+# read all about it at https://github.com/dotnet/tye
+#
+# when you've given us a try, we'd love to know what you think:
+#    https://aka.ms/AA7q20u
+#
+name: based
+services:
+- name: based-identityserver
+  project: apps/based.IdentityServer/based.IdentityServer.csproj
+  bindings:
+    - protocol: https
+      port: 44444
+- name: based-gateway
+  project: gateway/based.Gateway/based.Gateway.csproj
+  bindings:
+    - protocol: https
+      port: 55555
+- name: based-adminservice-httpapi-host
+  project: services/administration/host/based.AdminService.HttpApi.Host/based.AdminService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 7001
+- name: based-identityservice-httpapi-host
+  project: services/identity/host/based.IdentityService.HttpApi.Host/based.IdentityService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 7002
+- name: based-saasservice-httpapi-host
+  project: services/saas/host/based.SaaSService.HttpApi.Host/based.SaaSService.HttpApi.Host.csproj
+  bindings:
+    - protocol: https
+      port: 7003
