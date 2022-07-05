@@ -38,10 +38,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Based.Shared.Microservices\Based.Shared.Microservices.csproj" />
     <ProjectReference Include="..\..\services\administration\src\Based.AdminService.EntityFrameworkCore\Based.AdminService.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\services\identity\src\Based.IdentityService.EntityFrameworkCore\Based.IdentityService.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\services\saas\src\Based.SaaSService.EntityFrameworkCore\Based.SaaSService.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
   </ItemGroup>
 
 </Project>

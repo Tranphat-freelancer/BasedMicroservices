@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <None Remove="appsettings.json"/>
+	  <None Remove="appsettings.json" />
 	  <Content Include="appsettings.json">
 		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>
-	  <None Remove="appsettings.secrets.json"/>
+	  <None Remove="appsettings.secrets.json" />
 	  <Content Include="appsettings.secrets.json">
 		  <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
 		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -32,7 +32,6 @@
     <ProjectReference Include="..\..\services\identity\src\Based.IdentityService.EntityFrameworkCore\Based.IdentityService.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\services\saas\src\Based.SaaSService.Application.Contracts\Based.SaaSService.Application.Contracts.csproj" />
     <ProjectReference Include="..\..\services\saas\src\Based.SaaSService.EntityFrameworkCore\Based.SaaSService.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
   </ItemGroup>
 
   <ItemGroup>

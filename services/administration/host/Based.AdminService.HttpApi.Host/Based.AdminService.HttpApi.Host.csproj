@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Based.Shared.Microservices\Based.Shared.Microservices.csproj" />
+    <ProjectReference Include="..\..\..\..\shared\Based.Shared.Microservices\Based.Shared.Microservices.csproj" />
     <ProjectReference Include="..\..\..\identity\src\Based.IdentityService.Application.Contracts\Based.IdentityService.Application.Contracts.csproj" />
     <ProjectReference Include="..\..\..\identity\src\Based.IdentityService.EntityFrameworkCore\Based.IdentityService.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\..\saas\src\Based.SaaSService.Application.Contracts\Based.SaaSService.Application.Contracts.csproj">

@@ -2,7 +2,7 @@
 using Volo.Abp.EventBus.RabbitMq;
 using Volo.Abp.Modularity;
 
-namespace Based.Microservice.Shared;
+namespace Based.Shared.Microservice;
 
 [DependsOn(
     //typeof(AbpEventBusRabbitMqModule),

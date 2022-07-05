@@ -1,6 +1,6 @@
 using Based.AdminService.EntityFrameworkCore;
 using Based.IdentityService.EntityFrameworkCore;
-using Based.Microservice.Shared;
+using Based.Shared.Microservice;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
