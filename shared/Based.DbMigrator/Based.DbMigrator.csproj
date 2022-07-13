@@ -25,13 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Autofac" Version="5.3.1" />
-    <ProjectReference Include="..\..\services\administration\src\Based.AdminService.Application.Contracts\Based.AdminService.Application.Contracts.csproj" />
-    <ProjectReference Include="..\..\services\administration\src\Based.AdminService.EntityFrameworkCore\Based.AdminService.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\..\services\identity\src\Based.IdentityService.Application.Contracts\Based.IdentityService.Application.Contracts.csproj" />
-    <ProjectReference Include="..\..\services\identity\src\Based.IdentityService.EntityFrameworkCore\Based.IdentityService.EntityFrameworkCore.csproj" />
-    <ProjectReference Include="..\..\services\saas\src\Based.SaaSService.Application.Contracts\Based.SaaSService.Application.Contracts.csproj" />
-    <ProjectReference Include="..\..\services\saas\src\Based.SaaSService.EntityFrameworkCore\Based.SaaSService.EntityFrameworkCore.csproj" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="5.3.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +33,11 @@
     <Content Remove="Logs\**" />
     <EmbeddedResource Remove="Logs\**" />
     <None Remove="Logs\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\services\based\src\Based.Application.Contracts\Based.Application.Contracts.csproj" />
+    <ProjectReference Include="..\..\services\based\src\Based.EntityFrameworkCore\Based.EntityFrameworkCore.csproj" />
   </ItemGroup>
 
 </Project>

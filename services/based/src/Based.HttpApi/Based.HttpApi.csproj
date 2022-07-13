@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>Based</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Based.Application.Contracts\Based.Application.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EasyAbp.Abp.EntityUi.HttpApi" Version="0.5.3" />
+		<PackageReference Include="EasyAbp.Abp.DynamicMenu.HttpApi" Version="0.4.2" />
+		<PackageReference Include="EasyAbp.Abp.DynamicEntity.HttpApi" Version="0.5.6" />
+		<PackageReference Include="EasyAbp.Abp.DynamicPermission.HttpApi" Version="0.2.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Account.HttpApi" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.Identity.HttpApi" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.SettingManagement.HttpApi" Version="5.3.2" />
+	</ItemGroup>
+
+</Project>

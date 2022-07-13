@@ -1,10 +1,12 @@
 ﻿@page
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Based.Pages
+@using Based.Localization
 @using Volo.Abp.Users
 @using Volo.Abp.AspNetCore.Mvc.UI.Theming
 @using Volo.Abp.Ui.Branding
 @model IndexModel
+@inject IHtmlLocalizer<BasedResource> L
 @inject ICurrentUser CurrentUser
 @inject IBrandingProvider BrandingProvider
 @inject ITheme Theme
@@ -42,17 +44,17 @@
                                     @if (CurrentUser.IsAuthenticated)
                                     {
                                         <span class="fs-16">
-                                            Welcome <span class="fw-7">@CurrentUser.UserName</span>
+                                            @L["Welcome"] <span class="fw-7">@CurrentUser.UserName</span>
                                         </span>
                                         <span class="fs-14 d-block text-dark-800 opacity-75 mb-1">@CurrentUser.Email</span>
                                         <div class="d-grid gap-2">
-                                            <a abp-button="Outline_Primary" asp-controller="Manage" asp-action="Index" asp-area="Account">MyAccount</a>
-                                            <a abp-button="Primary" asp-controller="Logout" asp-action="Index" asp-area="Account">Logout</a>
+                                            <a abp-button="Outline_Primary" asp-controller="Manage" asp-action="Index" asp-area="Account">@L["MyAccount"]</a>
+                                            <a abp-button="Primary" asp-controller="Logout" asp-action="Index" asp-area="Account">@L["Logout"]</a>
                                         </div>
                                     }
                                     else
                                     {
-                                        <a abp-button="Primary" asp-controller="Login" asp-action="Index" asp-area="Account">Login</a>
+                                        <a abp-button="Primary" asp-controller="Login" asp-action="Index" asp-area="Account">@L["Login"]</a>
                                     }
                                 </div>
                             </div>

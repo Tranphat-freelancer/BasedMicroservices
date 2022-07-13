@@ -1,0 +1,14 @@
+{
+  "culture": "vi",
+  "texts": {
+    "Menu:Home": "Trang chủ",
+    "Menu:Demo": "Demo nè",
+    "Menu:Field": "Quản lí lĩnh vực",
+    "Menu:DynamicEntity": "Quản lý thực thể",
+    "Menu:EntityUi": "Giao diện thực thể",
+    "iMenu:Entity": "Thực thể",
+    "iMenu:Module": "Mô-đun",
+    "Welcome": "Chào mừng bạn",
+    "LongWelcomeMessage": "Chào mừng bạn đến ứng dụng. Đây là một dự án khởi nghiệp dựa trên khung ABP. Để biết thêm thông tin, hãy truy cập abp.io."
+  }
+}

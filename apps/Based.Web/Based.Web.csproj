@@ -1,48 +1,61 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
-  <!--<Import Project="..\..\common.props" />-->
+	<!--<Import Project="..\..\common.props" />-->
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>Based.Web</RootNamespace>
-    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
-    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
-    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
-    <PreserveCompilationReferences>true</PreserveCompilationReferences>
-    <UserSecretsId>Based-4681b4fd-151f-4221-84a4-929d86723e4c</UserSecretsId>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>Based.Web</RootNamespace>
+		<AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+		<GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+		<GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+		<MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+		<PreserveCompilationReferences>true</PreserveCompilationReferences>
+		<UserSecretsId>Based-4681b4fd-151f-4221-84a4-929d86723e4c</UserSecretsId>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.Client" Version="5.3.1" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Authentication.OpenIdConnect" Version="5.3.1" />
-    <PackageReference Include="Volo.Abp.Http.Client.Web" Version="5.3.1" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="5.3.1" />
-    <PackageReference Include="Volo.Abp.Identity.Web" Version="5.3.1" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="5.3.1" />
-    <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="5.3.1" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla" Version="2.1.0" />
+		<PackageReference Include="EasyAbp.Abp.EntityUi.Web" Version="0.5.3" />
+		<PackageReference Include="EasyAbp.Abp.EntityUi.DynamicEntity.Web" Version="0.5.3" />
+		<PackageReference Include="EasyAbp.Abp.DynamicMenu.Web" Version="0.4.2" />
+		<PackageReference Include="EasyAbp.Abp.DynamicEntity.Web" Version="0.5.6" />
+		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Web" Version="0.2.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Logs\**" />
-    <Content Remove="Logs\**" />
-    <EmbeddedResource Remove="Logs\**" />
-    <None Remove="Logs\**" />
-  </ItemGroup>
+	<ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
-    <ProjectReference Include="..\..\shared\Based.Shared.Localization\Based.Shared.Localization.csproj" />
-  </ItemGroup>
+		<PackageReference Include="Volo.Abp.AspNetCore.Mvc.Client" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.AspNetCore.Authentication.OpenIdConnect" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.Http.Client.Web" Version="5.3.2" />
+		<!--<PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic" Version="5.3.1" />-->
+		<PackageReference Include="Volo.Abp.Http.Client.IdentityModel.Web" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.Identity.Web" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.TenantManagement.Web" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Web" Version="5.3.2" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="Pages\**\*.js">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Pages\**\*.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Remove="Logs\**" />
+		<Content Remove="Logs\**" />
+		<EmbeddedResource Remove="Logs\**" />
+		<None Remove="Logs\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\services\based\src\Based.EntityFrameworkCore\Based.EntityFrameworkCore.csproj" />
+		<ProjectReference Include="..\..\services\based\src\Based.HttpApi.Client\Based.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\services\based\src\Based.HttpApi\Based.HttpApi.csproj" />
+		<ProjectReference Include="..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Pages\**\*.js">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Pages\**\*.css">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
 
 </Project>

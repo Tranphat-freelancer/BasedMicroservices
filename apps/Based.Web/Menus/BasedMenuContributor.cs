@@ -1,7 +1,9 @@
 ﻿using Based.Localization;
+using Based.Shared.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
+using Volo.Abp.Account.Localization;
 using Volo.Abp.Authorization.Permissions;
 using Volo.Abp.Identity.Web.Navigation;
 using Volo.Abp.SettingManagement.Web.Navigation;
@@ -47,14 +49,14 @@ public class BasedMenuContributor : IMenuContributor
             )
         );
 
-        //if (MultiTenancyConsts.IsEnabled)
-        //{
-        administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
-        //}
-        //else
-        //{
-        //administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
-        //}
+        if (MultiTenancyConsts.IsEnabled)
+        {
+            administration.SetSubItemOrder(TenantManagementMenuNames.GroupName, 1);
+        }
+        else
+        {
+            administration.TryRemoveMenuItem(TenantManagementMenuNames.GroupName);
+        }
 
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 3);
@@ -65,7 +67,7 @@ public class BasedMenuContributor : IMenuContributor
     private Task ConfigureUserMenuAsync(MenuConfigurationContext context)
     {
         var l = context.GetLocalizer<BasedResource>();
-        var accountStringLocalizer = context.GetLocalizer<BasedResource>();
+        var accountStringLocalizer = context.GetLocalizer<AccountResource>();
         var identityServerUrl = _configuration["AuthServer:Authority"] ?? "";
 
         context.Menu.AddItem(new ApplicationMenuItem("Account.Manage", accountStringLocalizer["MyAccount"],

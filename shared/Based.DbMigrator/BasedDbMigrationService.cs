@@ -1,9 +1,7 @@
-using Based.AdminService.EntityFrameworkCore;
-using Based.IdentityService.EntityFrameworkCore;
-using Based.SaaSService.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Based.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Threading;
@@ -88,14 +86,15 @@ public class BasedDbMigrationService : ITransientDependency
     {
         using (var uow = _unitOfWorkManager.Begin(true))
         {
-            if (tenantId == null)
-            {
-                /* SaaS schema should only be available in the host side */
-                await MigrateDatabaseAsync<SaaSServiceDbContext>(cancellationToken);
-            }
+            //if (tenantId == null)
+            //{
+            //    /* SaaS schema should only be available in the host side */
+            //    await MigrateDatabaseAsync<SaaSServiceDbContext>(cancellationToken);
+            //}
 
-            await MigrateDatabaseAsync<AdminServiceDbContext>(cancellationToken);
-            await MigrateDatabaseAsync<IdentityServiceDbContext>(cancellationToken);
+            //await MigrateDatabaseAsync<AdminServiceDbContext>(cancellationToken);
+            //await MigrateDatabaseAsync<IdentityServiceDbContext>(cancellationToken);
+            await MigrateDatabaseAsync<BasedDbContext>(cancellationToken);
 
             await uow.CompleteAsync(cancellationToken);
         }

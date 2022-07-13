@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="..\..\common.props" />
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>Based</RootNamespace>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Based.Domain\Based.Domain.csproj" />
+		<ProjectReference Include="..\Based.Application.Contracts\Based.Application.Contracts.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EasyAbp.Abp.EntityUi.Application" Version="0.5.3" />
+		<PackageReference Include="EasyAbp.Abp.DynamicMenu.Application" Version="0.4.2" />
+		<PackageReference Include="EasyAbp.Abp.DynamicEntity.Application" Version="0.5.6" />
+		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Application" Version="0.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Volo.Abp.Account.Application" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.Identity.Application" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.TenantManagement.Application" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="5.3.2" />
+		<PackageReference Include="Volo.Abp.SettingManagement.Application" Version="5.3.2" />
+	</ItemGroup>
+
+</Project>

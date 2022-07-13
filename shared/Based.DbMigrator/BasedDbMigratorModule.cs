@@ -1,9 +1,5 @@
-﻿using Based.AdminService;
-using Based.AdminService.EntityFrameworkCore;
-using Based.IdentityService;
-using Based.IdentityService.EntityFrameworkCore;
-using Based.SaaSService;
-using Based.SaaSService.EntityFrameworkCore;
+﻿using Based;
+using Based.EntityFrameworkCore;
 using Volo.Abp.Autofac;
 using Volo.Abp.Modularity;
 
@@ -11,12 +7,15 @@ namespace Based.DbMigrator;
 
 [DependsOn(
     typeof(AbpAutofacModule),
-    typeof(SaaSServiceEntityFrameworkCoreModule),
-    typeof(AdminServiceEntityFrameworkCoreModule),
-    typeof(IdentityServiceEntityFrameworkCoreModule),
-    typeof(SaaSServiceApplicationContractsModule),
-    typeof(AdminServiceApplicationContractsModule),
-    typeof(IdentityServiceApplicationContractsModule)
+    typeof(BasedApplicationContractsModule),
+    typeof(BasedEntityFrameworkCoreModule)
+    //typeof(SaaSServiceEntityFrameworkCoreModule),
+    //typeof(AdminServiceEntityFrameworkCoreModule),
+    //typeof(IdentityServiceEntityFrameworkCoreModule),
+    //typeof(SaaSServiceApplicationContractsModule),
+    //typeof(AdminServiceApplicationContractsModule),
+    //typeof(IdentityServiceApplicationContractsModule)
+
     //typeof(BasedHostingModule)
     )]
 public class BasedDbMigratorModule : AbpModule

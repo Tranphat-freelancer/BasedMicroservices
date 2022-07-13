@@ -1,6 +1,12 @@
 using Based.Localization;
 using Based.Shared.Hosting;
 using Based.Web.Menus;
+using EasyAbp.Abp.DynamicEntity.Web;
+using EasyAbp.Abp.DynamicMenu.Web;
+using EasyAbp.Abp.DynamicPermission.Web;
+using EasyAbp.Abp.EntityUi.Web;
+using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla;
+using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
@@ -15,14 +21,10 @@ using Volo.Abp.AspNetCore.Authentication.OpenIdConnect;
 using Volo.Abp.AspNetCore.Mvc.Client;
 using Volo.Abp.AspNetCore.Mvc.Localization;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Toolbars;
-using Volo.Abp.Autofac;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.Caching;
-using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Http.Client.Web;
 using Volo.Abp.Identity.Web;
@@ -35,18 +37,23 @@ using Volo.Abp.UI.Navigation.Urls;
 namespace Based.Web;
 
 [DependsOn(
+    typeof(AbpEntityUiWebModule),
+    typeof(AbpEntityUiDynamicEntityWebModule),
+    typeof(AbpDynamicMenuWebModule),
+    typeof(AbpDynamicEntityWebModule),
+    typeof(AbpDynamicPermissionWebModule),
     typeof(SharedHostingModule),
-    typeof(SharedLocalizationModule),
+    typeof(BasedHttpApiClientModule),
+    typeof(BasedHttpApiModule),
     typeof(AbpAspNetCoreAuthenticationOpenIdConnectModule),
     typeof(AbpAspNetCoreMvcClientModule),
     typeof(AbpHttpClientWebModule),
-    typeof(AbpAspNetCoreMvcUiBasicThemeModule),
-    typeof(AbpAutofacModule),
-    typeof(AbpCachingStackExchangeRedisModule),
+    typeof(AbpAspNetCoreMvcUiStislaThemeModule),
     typeof(AbpSettingManagementWebModule),
     typeof(AbpHttpClientIdentityModelWebModule),
     typeof(AbpIdentityWebModule),
     typeof(AbpTenantManagementWebModule)
+
     )]
 public class BasedWebModule : AbpModule
 {
@@ -56,6 +63,8 @@ public class BasedWebModule : AbpModule
         {
             options.AddAssemblyResource(
                 typeof(BasedResource),
+                typeof(BasedDomainSharedModule).Assembly,
+                typeof(BasedApplicationContractsModule).Assembly,
                 typeof(BasedWebModule).Assembly
             );
         });
@@ -80,7 +89,7 @@ public class BasedWebModule : AbpModule
         Configure<AbpBundlingOptions>(options =>
         {
             options.StyleBundles.Configure(
-                BasicThemeBundles.Styles.Global,
+                StislaThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");
@@ -104,6 +113,7 @@ public class BasedWebModule : AbpModule
             options.Applications["MVC"].RootUrl = configuration["App:SelfUrl"];
         });
     }
+
 
     private void ConfigureAuthentication(ServiceConfigurationContext context, IConfiguration configuration)
     {
@@ -131,9 +141,7 @@ public class BasedWebModule : AbpModule
                 options.Scope.Add("role");
                 options.Scope.Add("email");
                 options.Scope.Add("phone");
-                options.Scope.Add("SaasService");
-                options.Scope.Add("IdentityService");
-                options.Scope.Add("AdminService");
+                options.Scope.Add("BasedService");
             });
     }
 
@@ -193,7 +201,10 @@ public class BasedWebModule : AbpModule
         app.UseRouting();
         app.UseAuthentication();
 
-        app.UseMultiTenancy();
+        if (MultiTenancyConsts.IsEnabled)
+        {
+            app.UseMultiTenancy();
+        }
 
         app.UseAuthorization();
         app.UseAbpSerilogEnrichers();

@@ -81,7 +81,7 @@ public class IdentityServerDataSeeder : ITransientDependency
                 name: client.ClientId,
                 scopes: commonScopes.Union(client.Scopes),
                 grantTypes: client.GrantTypes,
-                secret: (client.ClientSecret ?? "1q2w3e*").Sha256(),
+                secret: client.ClientSecret.Sha256(),
                 requireClientSecret: false,
                 redirectUris: client.RedirectUris,
                 postLogoutRedirectUris: client.PostLogoutRedirectUris,

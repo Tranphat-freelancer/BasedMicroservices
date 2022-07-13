@@ -1,7 +1,0 @@
-{
-  "modules": {
-    "Based.AdminService": {
-      "path": "Based.AdminService.abpmdl.json"
-    }
-  }
-}

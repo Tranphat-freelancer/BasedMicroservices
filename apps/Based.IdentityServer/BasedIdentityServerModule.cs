@@ -1,7 +1,9 @@
-using Based.AdminService.EntityFrameworkCore;
-using Based.IdentityService.EntityFrameworkCore;
-using Based.SaaSService.EntityFrameworkCore;
+using Based.EntityFrameworkCore;
+using Based.Localization;
 using Based.Shared.Hosting;
+using Localization.Resources.AbpUi;
+using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla;
+using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.DataProtection;
@@ -14,26 +16,23 @@ using Volo.Abp;
 using Volo.Abp.Account;
 using Volo.Abp.Account.Web;
 using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic;
-using Volo.Abp.AspNetCore.Mvc.UI.Theme.Basic.Bundling;
 using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared;
 using Volo.Abp.Auditing;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.Caching;
+using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.UI.Navigation.Urls;
 
 namespace Based;
 
 [DependsOn(
+    typeof(SharedHostingModule),
     typeof(AbpAccountWebIdentityServerModule),
     typeof(AbpAccountApplicationModule),
     typeof(AbpAccountHttpApiModule),
-    typeof(AbpAspNetCoreMvcUiBasicThemeModule),
-    typeof(AdminServiceEntityFrameworkCoreModule),
-    typeof(SaaSServiceEntityFrameworkCoreModule),
-    typeof(IdentityServiceEntityFrameworkCoreModule),
-    typeof(SharedHostingModule)
+    typeof(AbpAspNetCoreMvcUiStislaThemeModule),
+    typeof(BasedEntityFrameworkCoreModule)
     )]
 public class BasedIdentityServerModule : AbpModule
 {
@@ -42,10 +41,22 @@ public class BasedIdentityServerModule : AbpModule
         var hostingEnvironment = context.Services.GetHostingEnvironment();
         var configuration = context.Services.GetConfiguration();
 
+        Configure<AbpLocalizationOptions>(options =>
+        {
+            options.Resources
+                .Get<BasedResource>()
+                .AddBaseTypes(
+                    typeof(AbpUiResource)
+                );
+
+            options.Languages.Add(new LanguageInfo("en", "en", "English"));
+            options.Languages.Add(new LanguageInfo("vi", "vi", "Tiếng Việt"));
+        });
+
         Configure<AbpBundlingOptions>(options =>
         {
             options.StyleBundles.Configure(
-                BasicThemeBundles.Styles.Global,
+                StislaThemeBundles.Styles.Global,
                 bundle =>
                 {
                     bundle.AddFiles("/global-styles.css");
@@ -63,6 +74,9 @@ public class BasedIdentityServerModule : AbpModule
         {
             options.Applications["MVC"].RootUrl = configuration["App:SelfUrl"];
             options.RedirectAllowedUrls.AddRange(configuration["App:RedirectAllowedUrls"].Split(','));
+
+            options.Applications["Angular"].RootUrl = configuration["App:ClientUrl"];
+            options.Applications["Angular"].Urls[AccountUrlNames.PasswordReset] = "account/reset-password";
         });
 
         Configure<AbpBackgroundJobOptions>(options =>
@@ -125,7 +139,10 @@ public class BasedIdentityServerModule : AbpModule
         app.UseCors();
         app.UseAuthentication();
 
-        app.UseMultiTenancy();
+        if (MultiTenancyConsts.IsEnabled)
+        {
+            app.UseMultiTenancy();
+        }
 
         app.UseUnitOfWork();
         app.UseIdentityServer();
