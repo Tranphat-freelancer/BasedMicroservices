@@ -54,9 +54,9 @@ public class BasedEntityFrameworkCoreModule : AbpModule
             options.UseSqlServer();
         });
         //disable datafilter
-        Configure<AbpDataFilterOptions>(options =>
-        {
-            options.DefaultStates[typeof(ISoftDelete)] = new DataFilterState(isEnabled: false);
-        });
+        //Configure<AbpDataFilterOptions>(options =>
+        //{
+        //    options.DefaultStates[typeof(ISoftDelete)] = new DataFilterState(isEnabled: false);
+        //});
     }
 }

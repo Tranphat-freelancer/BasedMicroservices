@@ -87,7 +87,7 @@ public class BasedDbContext :
         builder.ConfigureAbpEntityUi();
         builder.ConfigureAbpDynamicMenu();
         builder.ConfigureAbpDynamicEntity();
-        //builder.ConfigureAbpDynamicPermission();
+        builder.ConfigureAbpDynamicPermission();
         /* Configure your own tables/entities inside here */
 
         //builder.Entity<YourEntity>(b =>

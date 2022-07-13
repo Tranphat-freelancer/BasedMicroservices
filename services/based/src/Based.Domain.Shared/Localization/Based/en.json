@@ -9,6 +9,26 @@
     "iMenu:Entity": "Entity",
     "iMenu:Module": "Module",
     "Welcome": "Welcome",
-    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io."
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    //Groups Permission 1
+    //Group name - Xác định bằng value GroupPermission ở appsettings
+    "Based": "Core base",
+    //Management
+    "Based.Management": "Core base management",
+    //Create
+    "Based.Create": "Core base create",
+    //Update
+    "Based.Update": "Core base update",
+    //Delete
+    "Based.Delete": "Core base delete",
+    //Mores
+    "Based.MoreOne": "Core base more one",
+    //Groups Permission 2
+    "QuanLySangKien": "Idea core",
+    "QuanLySangKien.Management": "Idea core management",
+    "QuanLySangKien.Create": "Idea core create",
+    "QuanLySangKien.Update": "Idea core update",
+    "QuanLySangKien.Delete": "Idea core delete",
+    "QuanLySangKien.MoreTwo": "Idea core more one"
   }
 }

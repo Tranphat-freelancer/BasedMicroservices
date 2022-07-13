@@ -9,6 +9,26 @@
     "iMenu:Entity": "Thực thể",
     "iMenu:Module": "Mô-đun",
     "Welcome": "Chào mừng bạn",
-    "LongWelcomeMessage": "Chào mừng bạn đến ứng dụng. Đây là một dự án khởi nghiệp dựa trên khung ABP. Để biết thêm thông tin, hãy truy cập abp.io."
+    "LongWelcomeMessage": "Chào mừng bạn đến ứng dụng. Đây là một dự án khởi nghiệp dựa trên khung ABP. Để biết thêm thông tin, hãy truy cập abp.io.",
+    //Groups Permission 1
+    //Group name - Xác định bằng value GroupPermission ở appsettings
+    "Based": "Core cơ bản",
+    //Management
+    "Based.Management": "Core cơ bản quản lý",
+    //Create
+    "Based.Create": "Core cơ bản thêm",
+    //Update
+    "Based.Update": "Core cơ bản cập nhật",
+    //Delete
+    "Based.Delete": "Core cơ bản xoá",
+    //Mores
+    "Based.MoreOne": "Core cơ bản thêm một",
+    //Groups Permission 2
+    "QuanLySangKien": "Sáng kiến core",
+    "QuanLySangKien.Management": "Sáng kiến quản lý",
+    "QuanLySangKien.Create": "Sáng kiến thêm",
+    "QuanLySangKien.Update": "Sáng kiến cập nhật",
+    "QuanLySangKien.Delete": "Sáng kiến xoá",
+    "QuanLySangKien.MoreTwo": "Sáng kiến thêm hai"
   }
 }

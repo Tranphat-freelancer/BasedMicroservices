@@ -29,6 +29,7 @@ using Volo.Abp.Http.Client.IdentityModel.Web;
 using Volo.Abp.Http.Client.Web;
 using Volo.Abp.Identity.Web;
 using Volo.Abp.Modularity;
+using Volo.Abp.PermissionManagement.Web;
 using Volo.Abp.SettingManagement.Web;
 using Volo.Abp.TenantManagement.Web;
 using Volo.Abp.UI.Navigation;
@@ -50,6 +51,7 @@ namespace Based.Web;
     typeof(AbpHttpClientWebModule),
     typeof(AbpAspNetCoreMvcUiStislaThemeModule),
     typeof(AbpSettingManagementWebModule),
+    typeof(AbpPermissionManagementWebModule),
     typeof(AbpHttpClientIdentityModelWebModule),
     typeof(AbpIdentityWebModule),
     typeof(AbpTenantManagementWebModule)

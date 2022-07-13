@@ -17,10 +17,10 @@
 	<ItemGroup>
 		<PackageReference Include="Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla" Version="2.1.0" />
 		<PackageReference Include="EasyAbp.Abp.EntityUi.Web" Version="0.5.3" />
-		<PackageReference Include="EasyAbp.Abp.EntityUi.DynamicEntity.Web" Version="0.5.3" />
 		<PackageReference Include="EasyAbp.Abp.DynamicMenu.Web" Version="0.4.2" />
 		<PackageReference Include="EasyAbp.Abp.DynamicEntity.Web" Version="0.5.6" />
 		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Web" Version="0.2.2" />
+		<PackageReference Include="EasyAbp.Abp.EntityUi.DynamicEntity.Web" Version="0.5.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -43,7 +43,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\services\based\src\Based.EntityFrameworkCore\Based.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\..\services\based\src\Based.HttpApi.Client\Based.HttpApi.Client.csproj" />
 		<ProjectReference Include="..\..\services\based\src\Based.HttpApi\Based.HttpApi.csproj" />
 		<ProjectReference Include="..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
