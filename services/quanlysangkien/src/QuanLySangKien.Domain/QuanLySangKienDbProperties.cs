@@ -1,4 +1,4 @@
-﻿namespace IdeaManagement;
+﻿namespace QuanLySangKien;
 
 public static class IdeaManagementDbProperties
 {

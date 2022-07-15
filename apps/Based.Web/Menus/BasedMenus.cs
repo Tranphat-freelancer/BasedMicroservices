@@ -1,4 +1,4 @@
-﻿namespace Based.Web.Menus;
+namespace Based.Web.Menus;
 
 public class BasedMenus
 {
@@ -7,4 +7,6 @@ public class BasedMenus
 
     //Add your menu items here...
 
+    public const string Field = Prefix + ".Field";
+    public const string Unit = Prefix + ".Unit";
 }

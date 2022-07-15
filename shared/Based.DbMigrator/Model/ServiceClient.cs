@@ -1,4 +1,4 @@
-namespace Based.DbMigrator;
+namespace Based.DbMigrator.Model;
 
 public class ServiceClient
 {

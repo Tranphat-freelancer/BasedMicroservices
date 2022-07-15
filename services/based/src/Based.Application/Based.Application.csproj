@@ -8,6 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\quanlysangkien\src\QuanLySangKien.Application.Contracts\QuanLySangKien.Application.Contracts.csproj" />
+		<ProjectReference Include="..\..\..\quanlysangkien\src\QuanLySangKien.Domain\QuanLySangKien.Domain.csproj" />
 		<ProjectReference Include="..\Based.Domain\Based.Domain.csproj" />
 		<ProjectReference Include="..\Based.Application.Contracts\Based.Application.Contracts.csproj" />
 	</ItemGroup>

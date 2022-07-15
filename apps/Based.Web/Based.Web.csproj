@@ -45,6 +45,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\services\based\src\Based.HttpApi.Client\Based.HttpApi.Client.csproj" />
 		<ProjectReference Include="..\..\services\based\src\Based.HttpApi\Based.HttpApi.csproj" />
+		<ProjectReference Include="..\..\services\quanlysangkien\src\QuanLySangKien.HttpApi.Client\QuanLySangKien.HttpApi.Client.csproj" />
+		<ProjectReference Include="..\..\services\quanlysangkien\src\QuanLySangKien.HttpApi\QuanLySangKien.HttpApi.csproj" />
 		<ProjectReference Include="..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
 	</ItemGroup>
 

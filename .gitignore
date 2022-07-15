@@ -262,3 +262,5 @@ yarn.lock
 *.rsa
 *.vsidx
 **/wwwroot/libs/
+/src
+/test

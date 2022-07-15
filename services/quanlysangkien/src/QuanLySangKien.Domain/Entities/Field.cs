@@ -6,7 +6,7 @@ namespace QuanLySangKien.Entities
     //Lĩnh vực
     public class Field : AuditedAggregateRoot<Guid>
     {
-
+        public string Descriptions { get; set; }
     protected Field()
     {
     }
@@ -14,6 +14,14 @@ namespace QuanLySangKien.Entities
     public Field(
         Guid id    ) : base(id)
     {
+    }
+
+    public Field(
+        Guid id,
+        string descriptions
+    ) : base(id)
+    {
+        Descriptions = descriptions;
     }
     }
 }

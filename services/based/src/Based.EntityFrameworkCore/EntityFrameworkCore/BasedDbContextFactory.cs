@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using Based.IdentityService;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;

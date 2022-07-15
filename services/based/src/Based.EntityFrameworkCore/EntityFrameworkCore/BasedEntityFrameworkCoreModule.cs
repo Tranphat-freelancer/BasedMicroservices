@@ -4,10 +4,8 @@ using EasyAbp.Abp.DynamicMenu.EntityFrameworkCore;
 using EasyAbp.Abp.DynamicPermission.EntityFrameworkCore;
 using EasyAbp.Abp.EntityUi.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Volo.Abp;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
-using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
@@ -46,6 +44,7 @@ public class BasedEntityFrameworkCoreModule : AbpModule
             /* Remove "includeAllEntities: true" to create
              * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
+            options.AddRepository<Unit, UnitRepository>();
             options.AddRepository<Field, FieldRepository>();
         });
 

@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using QuanLySangKien;
 using StackExchange.Redis;
 using System;
 using Volo.Abp;
@@ -38,11 +39,6 @@ using Volo.Abp.UI.Navigation.Urls;
 namespace Based.Web;
 
 [DependsOn(
-    typeof(AbpEntityUiWebModule),
-    typeof(AbpEntityUiDynamicEntityWebModule),
-    typeof(AbpDynamicMenuWebModule),
-    typeof(AbpDynamicEntityWebModule),
-    typeof(AbpDynamicPermissionWebModule),
     typeof(SharedHostingModule),
     typeof(BasedHttpApiClientModule),
     typeof(BasedHttpApiModule),
@@ -57,6 +53,15 @@ namespace Based.Web;
     typeof(AbpTenantManagementWebModule)
 
     )]
+[DependsOn(typeof(QuanLySangKienHttpApiModule))]
+[DependsOn(typeof(QuanLySangKienHttpApiClientModule))]
+
+[DependsOn(typeof(AbpEntityUiWebModule))]
+[DependsOn(typeof(AbpEntityUiDynamicEntityWebModule))]
+[DependsOn(typeof(AbpDynamicMenuWebModule))]
+[DependsOn(typeof(AbpDynamicEntityWebModule))]
+[DependsOn(typeof(AbpDynamicPermissionWebModule))]
+
 public class BasedWebModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

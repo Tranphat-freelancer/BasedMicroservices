@@ -1,5 +1,4 @@
-﻿using IdeaManagement;
-using Volo.Abp.Data;
+﻿using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace QuanLySangKien.EntityFrameworkCore;

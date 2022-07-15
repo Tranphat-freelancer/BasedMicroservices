@@ -1,4 +1,4 @@
-﻿namespace Based.IdentityService;
+﻿namespace Based;
 
 public static class BasedDbProperties
 {

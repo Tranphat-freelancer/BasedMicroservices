@@ -1,4 +1,4 @@
-﻿using Based.Localization;
+using Based.Localization;
 using Based.Shared.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -62,6 +62,12 @@ public class BasedMenuContributor : IMenuContributor
         administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 3);
 
         return Task.CompletedTask;
+        context.Menu.AddItem(
+            new ApplicationMenuItem(BasedMenus.Field, l["Menu:Field"], "/QuanLySangKien/Entities/Field")
+        );
+        context.Menu.AddItem(
+            new ApplicationMenuItem(BasedMenus.Unit, l["Menu:Unit"], "/QuanLySangKien/Entities/Unit")
+        );
     }
 
     private Task ConfigureUserMenuAsync(MenuConfigurationContext context)

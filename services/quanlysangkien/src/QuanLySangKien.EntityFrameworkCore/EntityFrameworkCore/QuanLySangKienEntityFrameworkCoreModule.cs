@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using QuanLySangKien.Entities;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.Modularity;
 
@@ -18,6 +19,8 @@ public class QuanLySangKienEntityFrameworkCoreModule : AbpModule
              * options.AddRepository<Question, EfCoreQuestionRepository>();
              */
             options.AddDefaultRepositories(true);
+            options.AddRepository<Field, FieldRepository>();
+            options.AddRepository<Unit, UnitRepository>();
         });
     }
 }

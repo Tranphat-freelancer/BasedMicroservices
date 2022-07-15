@@ -1,3 +1,4 @@
+using Based.DbMigrator.Model;
 using IdentityServer4.Models;
 using Microsoft.Extensions.Configuration;
 using System;
