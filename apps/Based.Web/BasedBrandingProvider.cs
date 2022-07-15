@@ -6,5 +6,5 @@ namespace Based.Web;
 [Dependency(ReplaceServices = true)]
 public class BasedBrandingProvider : DefaultBrandingProvider
 {
-    public override string AppName => "Based";
+    public override string AppName => "Sáng kiến";
 }

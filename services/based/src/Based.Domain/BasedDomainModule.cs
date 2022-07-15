@@ -42,10 +42,12 @@ public class BasedDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        Configure<AbpEntityUiOptions>(options =>
-        {
-            options.Modules.Add("BasedEntityUi", new AbpEntityUiModuleOptions(typeof(BasedDomainModule)));
-        });
+        //handler add Module to Entity UI
+        //Configure<AbpEntityUiOptions>(options =>
+        //{
+        //    options.Modules.Add("BasedEntityUi", new AbpEntityUiModuleOptions(typeof(BasedDomainModule)));
+        //});
+
 
 #if DEBUG
         context.Services.Replace(ServiceDescriptor.Singleton<IEmailSender, NullEmailSender>());

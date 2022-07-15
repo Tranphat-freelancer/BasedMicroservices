@@ -3,8 +3,7 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Based.Localization
 @using Volo.Abp.Users
-@inject IHtmlLocalizer<BasedResource> L
-@inject ICurrentUser CurrentUser
+@inherits  Based.Web.Pages.BasedPage 
 @section styles {
 <abp-style src="/Pages/Index.css" />
 }

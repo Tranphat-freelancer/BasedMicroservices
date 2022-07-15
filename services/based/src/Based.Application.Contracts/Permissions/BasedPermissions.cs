@@ -14,9 +14,6 @@ public static class BasedPermissions
 public class GroupPermission
 {
     public string GroupName { get; set; }
-    public string Management { get; set; }
-    public string Create { get; set; }
-    public string Update { get; set; }
-    public string Delete { get; set; }
-    public string[] More { get; set; }
+    public string[] Permissions { get; set; }
+    public string[] Elements { get; set; }
 }
