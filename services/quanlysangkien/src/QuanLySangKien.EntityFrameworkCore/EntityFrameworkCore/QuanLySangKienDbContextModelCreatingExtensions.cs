@@ -1,5 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using IdeaManagement;
+using Microsoft.EntityFrameworkCore;
+using QuanLySangKien.Entities;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace QuanLySangKien.EntityFrameworkCore;
 
@@ -10,24 +13,29 @@ public static class QuanLySangKienDbContextModelCreatingExtensions
     {
         Check.NotNull(builder, nameof(builder));
 
-        /* Configure all entities here. Example:
+        //Configure all entities here. Example:
 
-        builder.Entity<Question>(b =>
+        builder.Entity<Field>(b =>
         {
             //Configure table & schema name
-            b.ToTable(QuanLySangKienDbProperties.DbTablePrefix + "Questions", QuanLySangKienDbProperties.DbSchema);
+            b.ToTable(IdeaManagementDbProperties.DbTablePrefix + "Fields", IdeaManagementDbProperties.DbSchema);
 
             b.ConfigureByConvention();
 
             //Properties
-            b.Property(q => q.Title).IsRequired().HasMaxLength(QuestionConsts.MaxTitleLength);
+            //b.Property(q => q.Title).IsRequired().HasMaxLength(QuestionConsts.MaxTitleLength);
 
-            //Relations
-            b.HasMany(question => question.Tags).WithOne().HasForeignKey(qt => qt.QuestionId);
+            ////Relations
+            //b.HasMany(question => question.Tags).WithOne().HasForeignKey(qt => qt.QuestionId);
 
             //Indexes
-            b.HasIndex(q => q.CreationTime);
+            //b.HasIndex(q => q.CreationTime);
         });
-        */
+        builder.Entity<Unit>(b =>
+        {
+            //Configure table & schema name
+            b.ToTable(IdeaManagementDbProperties.DbTablePrefix + "Units", IdeaManagementDbProperties.DbSchema);
+            b.ConfigureByConvention();
+        });
     }
 }

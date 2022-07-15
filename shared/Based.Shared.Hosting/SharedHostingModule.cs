@@ -1,13 +1,12 @@
-﻿using Localization.Resources.AbpUi;
-using Volo.Abp.AspNetCore.MultiTenancy;
+﻿using Volo.Abp.AspNetCore.MultiTenancy;
+using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.AspNetCore.Serilog;
+using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.Autofac;
 using Volo.Abp.Caching.StackExchangeRedis;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.SqlServer;
-using Volo.Abp.EventBus.RabbitMq;
-using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
 using Volo.Abp.MultiTenancy;
 using Volo.Abp.Swashbuckle;
@@ -15,14 +14,16 @@ using Volo.Abp.Swashbuckle;
 namespace Based.Shared.Hosting;
 
 [DependsOn(
-    typeof(AbpAutofacModule),
     typeof(AbpDataModule),
-    typeof(AbpAspNetCoreSerilogModule),
-    typeof(AbpAspNetCoreMultiTenancyModule),
+    typeof(AbpAutofacModule),
     typeof(AbpSwashbuckleModule),
+    typeof(AbpAspNetCoreSerilogModule),
     typeof(AbpEntityFrameworkCoreModule),
+    typeof(AbpAspNetCoreMultiTenancyModule),
     typeof(AbpCachingStackExchangeRedisModule),
-    typeof(AbpEntityFrameworkCoreSqlServerModule)
+    typeof(AbpAspNetCoreMvcUiMultiTenancyModule),
+    typeof(AbpEntityFrameworkCoreSqlServerModule),
+    typeof(AbpAuditLoggingEntityFrameworkCoreModule)
 )]
 public class SharedHostingModule : AbpModule
 {

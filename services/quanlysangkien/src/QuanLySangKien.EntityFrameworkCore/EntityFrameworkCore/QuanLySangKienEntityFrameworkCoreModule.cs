@@ -14,9 +14,10 @@ public class QuanLySangKienEntityFrameworkCoreModule : AbpModule
     {
         context.Services.AddAbpDbContext<QuanLySangKienDbContext>(options =>
         {
-                /* Add custom repositories here. Example:
-                 * options.AddRepository<Question, EfCoreQuestionRepository>();
-                 */
+            /* Add custom repositories here. Example:
+             * options.AddRepository<Question, EfCoreQuestionRepository>();
+             */
+            options.AddDefaultRepositories(true);
         });
     }
 }

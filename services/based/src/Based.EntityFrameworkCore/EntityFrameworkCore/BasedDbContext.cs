@@ -1,4 +1,4 @@
-﻿using EasyAbp.Abp.DynamicMenu.EntityFrameworkCore;
+using EasyAbp.Abp.DynamicMenu.EntityFrameworkCore;
 using EasyAbp.Abp.DynamicEntity.EntityFrameworkCore;
 using EasyAbp.Abp.DynamicPermission.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +19,8 @@ using EasyAbp.Abp.EntityUi.EntityFrameworkCore;
 using EasyAbp.Abp.DynamicEntity.DynamicEntities;
 using EasyAbp.Abp.DynamicEntity.ModelDefinitions;
 using EasyAbp.Abp.DynamicEntity.FieldDefinitions;
+using QuanLySangKien.Entities;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace Based.EntityFrameworkCore;
 
@@ -62,6 +64,7 @@ public class BasedDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     #endregion
+    public DbSet<Field> Fields { get; set; }
 
     public BasedDbContext(DbContextOptions<BasedDbContext> options)
         : base(options)
@@ -96,5 +99,15 @@ public class BasedDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+
+        builder.Entity<Field>(b =>
+        {
+            b.ToTable(BasedConsts.DbTablePrefix + "Fields", BasedConsts.DbSchema);
+            b.ConfigureByConvention(); 
+            
+
+            /* Configure more properties here */
+        });
     }
 }

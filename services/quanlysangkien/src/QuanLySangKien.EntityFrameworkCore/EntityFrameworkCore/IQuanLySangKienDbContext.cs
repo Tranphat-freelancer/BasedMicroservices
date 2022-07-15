@@ -1,10 +1,11 @@
-﻿using Volo.Abp.Data;
+﻿using IdeaManagement;
+using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 
 namespace QuanLySangKien.EntityFrameworkCore;
 
-[ConnectionStringName(QuanLySangKienDbProperties.ConnectionStringName)]
-public interface IQuanLySangKienDbContext : IEfCoreDbContext
+[ConnectionStringName(IdeaManagementDbProperties.ConnectionStringName)]
+public interface IIdeaManagementDbContext : IEfCoreDbContext
 {
     /* Add DbSet for each Aggregate Root here. Example:
      * DbSet<Question> Questions { get; }

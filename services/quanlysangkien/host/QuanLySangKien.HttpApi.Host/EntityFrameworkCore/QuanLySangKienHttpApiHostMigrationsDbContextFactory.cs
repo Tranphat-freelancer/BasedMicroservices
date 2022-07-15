@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using IdeaManagement;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +13,7 @@ public class QuanLySangKienHttpApiHostMigrationsDbContextFactory : IDesignTimeDb
         var configuration = BuildConfiguration();
 
         var builder = new DbContextOptionsBuilder<QuanLySangKienHttpApiHostMigrationsDbContext>()
-            .UseSqlServer(configuration.GetConnectionString("QuanLySangKien"));
+            .UseSqlServer(configuration.GetConnectionString(IdeaManagementDbProperties.ConnectionStringName));
 
         return new QuanLySangKienHttpApiHostMigrationsDbContext(builder.Options);
     }
