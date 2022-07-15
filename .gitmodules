@@ -1,0 +1,3 @@
+[submodule "services/IdeaManagement"]
+	path = services/IdeaManagement
+	url = https://github.com/Tranphat-freelancer/IdeaManagement.git
