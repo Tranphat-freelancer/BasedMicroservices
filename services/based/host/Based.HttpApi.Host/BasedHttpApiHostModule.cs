@@ -14,7 +14,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Volo.Abp;
-using Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy;
 using Volo.Abp.Caching;
 using Volo.Abp.Localization;
 using Volo.Abp.Modularity;
@@ -23,9 +22,11 @@ namespace Based;
 
 [DependsOn(
     typeof(BasedHttpApiModule),
-    typeof(AbpAspNetCoreMvcUiMultiTenancyModule),
     typeof(BasedApplicationModule),
     typeof(BasedEntityFrameworkCoreModule),
+    //typeof(QuanLySangKienHttpApiModule),
+    //typeof(QuanLySangKienApplicationModule),
+    //typeof(QuanLySangKienEntityFrameworkCoreModule),
     typeof(SharedHostingModule)
 
 )]

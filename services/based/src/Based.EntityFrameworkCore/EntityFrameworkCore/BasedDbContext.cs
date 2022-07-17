@@ -20,7 +20,6 @@ using Volo.Abp.PermissionManagement.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
-using QuanLySangKien.Entities;
 
 namespace Based.EntityFrameworkCore;
 
@@ -63,8 +62,6 @@ public class BasedDbContext :
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
-    public DbSet<Unit> Units { get; set; }
-    public DbSet<Field> Fields { get; set; }
     #endregion
     public BasedDbContext(DbContextOptions<BasedDbContext> options)
         : base(options)
@@ -99,25 +96,5 @@ public class BasedDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
-
-
-        builder.Entity<Unit>(b =>
-        {
-            b.ToTable(BasedConsts.DbTablePrefix + "Units", BasedConsts.DbSchema);
-            b.ConfigureByConvention(); 
-            
-
-            /* Configure more properties here */
-        });
-
-
-        builder.Entity<Field>(b =>
-        {
-            b.ToTable(BasedConsts.DbTablePrefix + "Fields", BasedConsts.DbSchema);
-            b.ConfigureByConvention(); 
-            
-
-            /* Configure more properties here */
-        });
     }
 }

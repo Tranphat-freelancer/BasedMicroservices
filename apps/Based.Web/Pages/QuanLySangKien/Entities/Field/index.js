@@ -42,6 +42,10 @@ $(function () {
                         ]
                 }
             },
+            {
+                title: l('FieldDescriptions'),
+                data: "descriptions"
+            },
         ]
     }));
 

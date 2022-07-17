@@ -26,6 +26,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
+		<ProjectReference Include="..\..\..\based\src\Based.EntityFrameworkCore\Based.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\..\src\QuanLySangKien.HttpApi\QuanLySangKien.HttpApi.csproj" />
 		<ProjectReference Include="..\..\src\QuanLySangKien.Application\QuanLySangKien.Application.csproj" />
 		<ProjectReference Include="..\..\src\QuanLySangKien.EntityFrameworkCore\QuanLySangKien.EntityFrameworkCore.csproj" />

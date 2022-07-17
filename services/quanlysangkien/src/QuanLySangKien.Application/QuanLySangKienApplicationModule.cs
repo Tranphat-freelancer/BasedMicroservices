@@ -15,10 +15,10 @@ public class QuanLySangKienApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
     {
-        context.Services.AddAutoMapperObjectMapper<QuanLySangKienApplicationModule>();
+        //context.Services.AddAutoMapperObjectMapper<QuanLySangKienApplicationModule>();
         Configure<AbpAutoMapperOptions>(options =>
         {
-            options.AddMaps<QuanLySangKienApplicationModule>(validate: true);
+            options.AddMaps<QuanLySangKienApplicationModule>();
         });
     }
 }

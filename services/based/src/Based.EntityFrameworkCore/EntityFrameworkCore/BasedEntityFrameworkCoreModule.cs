@@ -1,4 +1,3 @@
-using QuanLySangKien.Entities;
 using EasyAbp.Abp.DynamicEntity.EntityFrameworkCore;
 using EasyAbp.Abp.DynamicMenu.EntityFrameworkCore;
 using EasyAbp.Abp.DynamicPermission.EntityFrameworkCore;
@@ -44,8 +43,6 @@ public class BasedEntityFrameworkCoreModule : AbpModule
             /* Remove "includeAllEntities: true" to create
              * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
-            options.AddRepository<Unit, UnitRepository>();
-            options.AddRepository<Field, FieldRepository>();
         });
 
         Configure<AbpDbContextOptions>(options =>

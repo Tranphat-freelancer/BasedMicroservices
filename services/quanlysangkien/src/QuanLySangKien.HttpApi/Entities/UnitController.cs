@@ -1,15 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using QuanLySangKien.Entities;
+﻿using Microsoft.AspNetCore.Authorization;
 using QuanLySangKien.Entities.Dtos;
 using System;
 using System.Threading.Tasks;
 using Volo.Abp;
 using Volo.Abp.Application.Dtos;
 
-namespace QuanLySangKien.Controllers
+namespace QuanLySangKien.Entities
 {
     [RemoteService(Name = QuanLySangKienRemoteServiceConsts.RemoteServiceName)]
-    [ControllerName("UnitController")]
+    //[ControllerName("UnitController")]
+    [Authorize]
     public class UnitController : QuanLySangKienController, IUnitAppService
     {
         protected IUnitAppService UnitAppService { get; set; }
@@ -17,7 +17,6 @@ namespace QuanLySangKien.Controllers
         {
             this.UnitAppService = UnitAppService;
         }
-
         public virtual async Task<UnitDto> CreateAsync(CreateUpdateUnitDto input)
         {
             return await UnitAppService.CreateAsync(input);

@@ -42,6 +42,10 @@ $(function () {
                         ]
                 }
             },
+            {
+                title: l('UnitDescriptions'),
+                data: "descriptions"
+            },
         ]
     }));
 
