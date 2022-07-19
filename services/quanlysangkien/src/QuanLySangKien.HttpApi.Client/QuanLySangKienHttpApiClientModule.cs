@@ -19,7 +19,7 @@ public class QuanLySangKienHttpApiClientModule : AbpModule
 
         Configure<AbpVirtualFileSystemOptions>(options =>
         {
-            options.FileSets.AddEmbedded<QuanLySangKienHttpApiClientModule>();
+            options.FileSets.AddEmbedded<QuanLySangKienApplicationContractsModule>();
         });
 
     }

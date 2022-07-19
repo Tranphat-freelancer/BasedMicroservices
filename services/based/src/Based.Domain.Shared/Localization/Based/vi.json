@@ -3,32 +3,27 @@
   "texts": {
     "Menu:Home": "Trang chủ",
     "Menu:Demo": "Demo nè",
-    "Menu:Field": "Quản lí lĩnh vực",
     "Menu:DynamicEntity": "Quản lý thực thể",
     "Menu:EntityUi": "Giao diện thực thể",
+    "Menu:IdeaManagement": "Quản lý sáng kiến",
     "iMenu:Entity": "Thực thể",
     "iMenu:Module": "Mô-đun",
+    "iMenu:Field": "Lĩnh vực",
+    "iMenu:Unit": "Đơn vị",
     "Welcome": "Chào mừng bạn",
+    "Field": "Lĩnh vực",
+    "Unit": "Đơn vị",
+    "CreateField": "Thêm lĩnh vực",
+    "CreateUnit": "Thêm đơn vị",
+    "Edit": "Sửa",
+    "Delete": "Xoá",
     "LongWelcomeMessage": "Chào mừng bạn đến ứng dụng. Đây là một dự án khởi nghiệp dựa trên khung ABP. Để biết thêm thông tin, hãy truy cập abp.io.",
     //Groups Permission 1
     //Group name - Xác định bằng value GroupPermission ở appsettings
-    "Based": "Core cơ bản",
-    //Management
-    "Based.Management": "Core cơ bản quản lý",
-    //Create
-    "Based.Create": "Core cơ bản thêm",
-    //Update
-    "Based.Update": "Core cơ bản cập nhật",
-    //Delete
-    "Based.Delete": "Core cơ bản xoá",
-    //Mores
-    "Based.MoreOne": "Core cơ bản thêm một",
-    //Groups Permission 2
-    "QuanLySangKien": "Sáng kiến core",
+    "QuanLySangKien": "Sáng kiến",
     "QuanLySangKien.Management": "Sáng kiến quản lý",
-    "QuanLySangKien.Create": "Sáng kiến thêm",
-    "QuanLySangKien.Update": "Sáng kiến cập nhật",
-    "QuanLySangKien.Delete": "Sáng kiến xoá",
-    "QuanLySangKien.MoreTwo": "Sáng kiến thêm hai"
+    "QuanLySangKien.Management.Create": "Sáng kiến thêm",
+    "QuanLySangKien.Management.Update": "Sáng kiến cập nhật",
+    "QuanLySangKien.Management.Delete": "Sáng kiến xoá"
   }
 }

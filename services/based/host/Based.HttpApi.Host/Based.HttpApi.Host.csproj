@@ -22,7 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
+    <ProjectReference Include="..\..\..\..\shared\Based.Shared.Microservices\Based.Shared.Microservices.csproj" />
     <ProjectReference Include="..\..\src\Based.Application\Based.Application.csproj" />
     <ProjectReference Include="..\..\src\Based.EntityFrameworkCore\Based.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\..\src\Based.HttpApi\Based.HttpApi.csproj" />

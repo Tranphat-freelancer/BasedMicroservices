@@ -1,16 +1,18 @@
 @page
+@using Based.Web.Pages
 @using Microsoft.AspNetCore.Authorization
 @using Microsoft.AspNetCore.Mvc.Localization
+@using QuanLySangKien.Permissions
 @using Volo.Abp.AspNetCore.Mvc.UI.Layout
 @using Based.Web.Pages.QuanLySangKien.Entities.Field
 @using Based.Localization
 @using Based.Web.Menus
-@model IndexModel
+@model Based.Web.Pages.QuanLySangKien.Entities.Field.IndexModel
+@inherits BasedPage
 @inject IPageLayout PageLayout
-@inject IHtmlLocalizer<BasedResource> L
 @{
     PageLayout.Content.Title = L["Field"].Value;
-    PageLayout.Content.BreadCrumb.Add(L["Menu:Field"].Value);
+    PageLayout.Content.BreadCrumb.Add(L["iMenu:Field"].Value);
     PageLayout.Content.MenuItemName = BasedMenus.Field;
 }
 
@@ -30,10 +32,13 @@
                 <abp-card-title>@L["Field"]</abp-card-title>
             </abp-column>
             <abp-column size-md="_6" class="text-end">
+                @if (await AuthorizationService.IsGrantedAsync(QuanLySangKienPermissions.FieldManagement.Create))
+                {
                 <abp-button id="NewFieldButton"
                             text="@L["CreateField"].Value"
                             icon="plus"
                             button-type="Primary" />
+                }
             </abp-column>
         </abp-row>
     </abp-card-header>

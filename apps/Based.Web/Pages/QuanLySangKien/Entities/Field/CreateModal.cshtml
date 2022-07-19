@@ -1,8 +1,9 @@
 @page
+@using Based.Web.Pages
 @using Microsoft.AspNetCore.Mvc.Localization
 @using Volo.Abp.AspNetCore.Mvc.UI.Bootstrap.TagHelpers.Modal;
 @using Based.Localization
-@inject IHtmlLocalizer<BasedResource> L
+@inherits BasedPage
 @model Based.Web.Pages.QuanLySangKien.Entities.Field.CreateModalModel
 @{
     Layout = null;

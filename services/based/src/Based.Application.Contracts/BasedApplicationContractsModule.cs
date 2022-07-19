@@ -2,6 +2,7 @@
 using EasyAbp.Abp.DynamicMenu;
 using EasyAbp.Abp.DynamicPermission;
 using EasyAbp.Abp.EntityUi;
+using QuanLySangKien;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -27,6 +28,8 @@ namespace Based;
     typeof(AbpTenantManagementApplicationContractsModule),
     typeof(AbpObjectExtendingModule)
 )]
+[DependsOn(typeof(QuanLySangKienApplicationContractsModule))]
+
 public class BasedApplicationContractsModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

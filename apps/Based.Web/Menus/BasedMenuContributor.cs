@@ -1,6 +1,8 @@
 using Based.Localization;
 using Based.Shared.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using QuanLySangKien.Permissions;
 using System;
 using System.Threading.Tasks;
 using Volo.Abp.Account.Localization;
@@ -9,6 +11,7 @@ using Volo.Abp.Identity.Web.Navigation;
 using Volo.Abp.SettingManagement.Web.Navigation;
 using Volo.Abp.TenantManagement.Web.Navigation;
 using Volo.Abp.UI.Navigation;
+using Volo.Abp.Users;
 
 namespace Based.Web.Menus;
 
@@ -37,7 +40,6 @@ public class BasedMenuContributor : IMenuContributor
     {
         var administration = context.Menu.GetAdministration();
         var l = context.GetLocalizer<BasedResource>();
-
         context.Menu.Items.Insert(
             0,
             new ApplicationMenuItem(
@@ -60,14 +62,24 @@ public class BasedMenuContributor : IMenuContributor
 
         administration.SetSubItemOrder(IdentityMenuNames.GroupName, 2);
         administration.SetSubItemOrder(SettingManagementMenuNames.GroupName, 3);
+        context.Menu.AddItem(
+       new ApplicationMenuItem(
+           BasedMenus.Default,
+           displayName: l["Menu:IdeaManagement"],
+           icon: "fas fa-lightbulb")
+           .AddItem(new ApplicationMenuItem(
+                    name: BasedMenus.Field,
+                    displayName: l["iMenu:Field"],
+                    url: "/QuanLySangKien/Entities/Field")
+           .RequirePermissions(QuanLySangKienPermissions.QuanLySangKien.Default))
+           .AddItem(new ApplicationMenuItem(
+                    name: BasedMenus.Unit,
+                    displayName: l["iMenu:Unit"],
+                    url: "/QuanLySangKien/Entities/Unit")
+           .RequirePermissions(QuanLySangKienPermissions.QuanLySangKien.Default)));
 
         return Task.CompletedTask;
-        context.Menu.AddItem(
-            new ApplicationMenuItem(BasedMenus.Field, l["Menu:Field"], "/QuanLySangKien/Entities/Field")
-        );
-        context.Menu.AddItem(
-            new ApplicationMenuItem(BasedMenus.Unit, l["Menu:Unit"], "/QuanLySangKien/Entities/Unit")
-        );
+
     }
 
     private Task ConfigureUserMenuAsync(MenuConfigurationContext context)

@@ -1,5 +1,5 @@
 ﻿using Based.EntityFrameworkCore;
-using Based.Shared.Hosting;
+using Based.Shared.Microservices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -27,7 +27,7 @@ namespace Based;
     //typeof(QuanLySangKienHttpApiModule),
     //typeof(QuanLySangKienApplicationModule),
     //typeof(QuanLySangKienEntityFrameworkCoreModule),
-    typeof(SharedHostingModule)
+    typeof(SharedMicroserviceModule)
 
 )]
 public class BasedHttpApiHostModule : AbpModule

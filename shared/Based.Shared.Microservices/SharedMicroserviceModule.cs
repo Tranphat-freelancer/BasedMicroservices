@@ -1,11 +1,12 @@
-﻿using Based.Shared.Hosting;
-using Volo.Abp.EventBus.RabbitMq;
+﻿using Based.EntityFrameworkCore;
+using Based.Shared.Hosting;
 using Volo.Abp.Modularity;
 
 namespace Based.Shared.Microservices;
 
 [DependsOn(
     //typeof(AbpEventBusRabbitMqModule),
+    typeof(BasedEntityFrameworkCoreModule),
     typeof(SharedHostingModule)
 )]
 public class SharedMicroserviceModule : AbpModule

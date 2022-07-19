@@ -1,0 +1,16 @@
+﻿@using System.Linq
+@model Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.Toolbar.LanguageSwitch.LanguageSwitchViewComponentModel
+@if (Model.OtherLanguages.Any())
+{
+    <div class="dropdown">
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg" style="margin-top: 3px" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span>@Model.CurrentLanguage.DisplayName</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+            @foreach (var language in Model.OtherLanguages)
+            {
+                <a class="dropdown-item" href="~/Abp/Languages/Switch?culture=@(language.CultureName)&uiCulture=@(language.UiCultureName)&returnUrl=@Context.Request.Path">@language.DisplayName</a>
+            }
+        </div>
+    </div>
+}

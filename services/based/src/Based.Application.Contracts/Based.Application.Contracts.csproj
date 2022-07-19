@@ -25,6 +25,7 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <ProjectReference Include="..\..\..\quanlysangkien\src\QuanLySangKien.Application.Contracts\QuanLySangKien.Application.Contracts.csproj" />
 	  <ProjectReference Include="..\Based.Domain.Shared\Based.Domain.Shared.csproj" />
 	</ItemGroup>
 

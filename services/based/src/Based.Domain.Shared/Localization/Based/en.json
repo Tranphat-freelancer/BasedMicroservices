@@ -3,32 +3,27 @@
   "texts": {
     "Menu:Home": "Home",
     "Menu:Demo": "This is Demo",
-    "Menu:Field": "Field Management",
     "Menu:DynamicEntity": "Dynamic Entities",
     "Menu:EntityUi": "Entity Ui",
+    "Menu:IdeaManagement": "Idea Management",
     "iMenu:Entity": "Entity",
     "iMenu:Module": "Module",
+    "iMenu:Field": "Field",
+    "iMenu:Unit": "Unit",
     "Welcome": "Welcome",
+    "Field": "Field",
+    "Unit": "Unit",
+    "CreateField": "Create Field",
+    "CreateUnit": "Create Unit",
+    "Edit": "Update",
+    "Delete": "Delete",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
     //Groups Permission 1
     //Group name - Xác định bằng value GroupPermission ở appsettings
-    "Based": "Core base",
-    //Management
-    "Based.Management": "Core base management",
-    //Create
-    "Based.Create": "Core base create",
-    //Update
-    "Based.Update": "Core base update",
-    //Delete
-    "Based.Delete": "Core base delete",
-    //Mores
-    "Based.MoreOne": "Core base more one",
-    //Groups Permission 2
-    "QuanLySangKien": "Idea core",
-    "QuanLySangKien.Management": "Idea core management",
-    "QuanLySangKien.Create": "Idea core create",
-    "QuanLySangKien.Update": "Idea core update",
-    "QuanLySangKien.Delete": "Idea core delete",
-    "QuanLySangKien.MoreTwo": "Idea core more one"
+    "QuanLySangKien:GroupName": "Idea",
+    "QuanLySangKien.Management": "Idea Management",
+    "QuanLySangKien.Management.Create": "Idea Create",
+    "QuanLySangKien.Management.Update": "Idea Update",
+    "QuanLySangKien.Management.Delete": "Idea Delete"
   }
 }

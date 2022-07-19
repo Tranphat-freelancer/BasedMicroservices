@@ -264,3 +264,4 @@ yarn.lock
 **/wwwroot/libs/
 /src
 /test
+/themes/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla/src/wwwroot/themes/stisla/assets

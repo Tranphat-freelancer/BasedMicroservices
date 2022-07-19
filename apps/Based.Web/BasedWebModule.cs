@@ -149,6 +149,7 @@ public class BasedWebModule : AbpModule
                 options.Scope.Add("email");
                 options.Scope.Add("phone");
                 options.Scope.Add("BasedService");
+                options.Scope.Add("QuanLySangKienService");
             });
     }
 

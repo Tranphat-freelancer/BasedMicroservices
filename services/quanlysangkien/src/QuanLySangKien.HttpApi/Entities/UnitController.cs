@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using QuanLySangKien.Entities.Dtos;
+using QuanLySangKien.Permissions;
 using System;
 using System.Threading.Tasks;
 using Volo.Abp;
@@ -9,7 +10,6 @@ namespace QuanLySangKien.Entities
 {
     [RemoteService(Name = QuanLySangKienRemoteServiceConsts.RemoteServiceName)]
     //[ControllerName("UnitController")]
-    [Authorize]
     public class UnitController : QuanLySangKienController, IUnitAppService
     {
         protected IUnitAppService UnitAppService { get; set; }
@@ -26,17 +26,14 @@ namespace QuanLySangKien.Entities
         {
             await UnitAppService.DeleteAsync(id);
         }
-
         public virtual async Task<UnitDto> GetAsync(Guid id)
         {
             return await UnitAppService.GetAsync(id);
         }
-
         public virtual async Task<PagedResultDto<UnitDto>> GetListAsync(PagedAndSortedResultRequestDto input)
         {
             return await UnitAppService.GetListAsync(input);
         }
-
         public virtual async Task<UnitDto> UpdateAsync(Guid id, CreateUpdateUnitDto input)
         {
             return await UnitAppService.UpdateAsync(id, input);

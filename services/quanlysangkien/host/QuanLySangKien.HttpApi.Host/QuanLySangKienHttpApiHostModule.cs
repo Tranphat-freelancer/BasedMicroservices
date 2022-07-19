@@ -1,4 +1,4 @@
-using Based.Shared.Hosting;
+using Based.Shared.Microservices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;
@@ -21,7 +21,7 @@ using Volo.Abp.Modularity;
 namespace QuanLySangKien;
 
 [DependsOn(
-    typeof(SharedHostingModule),
+    typeof(SharedMicroserviceModule),
     typeof(QuanLySangKienHttpApiModule),
     typeof(QuanLySangKienApplicationModule),
     typeof(QuanLySangKienEntityFrameworkCoreModule)
