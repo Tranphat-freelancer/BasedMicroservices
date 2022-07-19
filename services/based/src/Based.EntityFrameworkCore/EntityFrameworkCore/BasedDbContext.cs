@@ -1,17 +1,9 @@
-using EasyAbp.Abp.DynamicEntity.DynamicEntities;
-using EasyAbp.Abp.DynamicEntity.EntityFrameworkCore;
-using EasyAbp.Abp.DynamicEntity.FieldDefinitions;
-using EasyAbp.Abp.DynamicEntity.ModelDefinitions;
-using EasyAbp.Abp.DynamicMenu.EntityFrameworkCore;
-using EasyAbp.Abp.DynamicPermission.EntityFrameworkCore;
-using EasyAbp.Abp.EntityUi.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
 using Volo.Abp.Data;
 using Volo.Abp.DependencyInjection;
 using Volo.Abp.EntityFrameworkCore;
-using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.FeatureManagement.EntityFrameworkCore;
 using Volo.Abp.Identity;
 using Volo.Abp.Identity.EntityFrameworkCore;
@@ -46,9 +38,9 @@ public class BasedDbContext :
      * uses this DbContext on runtime. Otherwise, it will use its own DbContext class.
      */
     //Dynamic Entity
-    public DbSet<FieldDefinition> FieldDefinitions { get; set; }
-    public DbSet<ModelDefinition> ModelDefinitions { get; set; }
-    public DbSet<DynamicEntity> DynamicEntities { get; set; }
+    //public DbSet<FieldDefinition> FieldDefinitions { get; set; }
+    //public DbSet<ModelDefinition> ModelDefinitions { get; set; }
+    //public DbSet<DynamicEntity> DynamicEntities { get; set; }
 
     //Identity
     public DbSet<IdentityUser> Users { get; set; }
@@ -84,10 +76,10 @@ public class BasedDbContext :
         builder.ConfigureTenantManagement();
 
         builder.ConfigureBackgroundJobs();
-        builder.ConfigureAbpEntityUi();
-        builder.ConfigureAbpDynamicMenu();
-        builder.ConfigureAbpDynamicEntity();
-        builder.ConfigureAbpDynamicPermission();
+        //builder.ConfigureAbpEntityUi();
+        //builder.ConfigureAbpDynamicMenu();
+        //builder.ConfigureAbpDynamicEntity();
+        //builder.ConfigureAbpDynamicPermission();
         /* Configure your own tables/entities inside here */
 
         //builder.Entity<YourEntity>(b =>

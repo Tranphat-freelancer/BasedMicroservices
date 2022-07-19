@@ -8,11 +8,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EasyAbp.Abp.EntityUi.Domain" Version="0.5.3" />
+		<!--<PackageReference Include="EasyAbp.Abp.EntityUi.Domain" Version="0.5.3" />
 		<PackageReference Include="EasyAbp.Abp.EntityUi.DynamicEntity.Domain" Version="0.5.3" />
 		<PackageReference Include="EasyAbp.Abp.DynamicMenu.Domain" Version="0.4.2" />
 		<PackageReference Include="EasyAbp.Abp.DynamicEntity.Domain" Version="0.5.6" />
-		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Domain" Version="0.2.2" />
+		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Domain" Version="0.2.2" />-->
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Volo.Abp.Emailing" Version="5.3.2" />

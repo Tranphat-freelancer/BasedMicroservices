@@ -4,21 +4,13 @@ using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
-using Volo.Abp.TenantManagement;
 using Volo.Abp.SettingManagement;
+using Volo.Abp.TenantManagement;
 using Volo.Abp.VirtualFileSystem;
-using EasyAbp.Abp.DynamicMenu;
-using EasyAbp.Abp.DynamicEntity;
-using EasyAbp.Abp.DynamicPermission;
-using EasyAbp.Abp.EntityUi;
 
 namespace Based;
 
 [DependsOn(
-    typeof(AbpEntityUiHttpApiClientModule),
-    typeof(AbpDynamicMenuHttpApiClientModule),
-    typeof(AbpDynamicEntityHttpApiClientModule),
-    typeof(AbpDynamicPermissionHttpApiClientModule),
     typeof(BasedApplicationContractsModule),
     typeof(AbpAccountHttpApiClientModule),
     typeof(AbpIdentityHttpApiClientModule),
@@ -27,6 +19,10 @@ namespace Based;
     typeof(AbpFeatureManagementHttpApiClientModule),
     typeof(AbpSettingManagementHttpApiClientModule)
 )]
+//[DependsOn(typeof(AbpEntityUiHttpApiClientModule))]
+//[DependsOn(typeof(AbpDynamicMenuHttpApiClientModule))]
+//[DependsOn(typeof(AbpDynamicEntityHttpApiClientModule))]
+//[DependsOn(typeof(AbpDynamicPermissionHttpApiClientModule))]
 public class BasedHttpApiClientModule : AbpModule
 {
     public const string RemoteServiceName = "Default";

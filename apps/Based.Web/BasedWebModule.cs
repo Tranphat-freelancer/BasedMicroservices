@@ -1,10 +1,6 @@
 using Based.Localization;
 using Based.Shared.Hosting;
 using Based.Web.Menus;
-using EasyAbp.Abp.DynamicEntity.Web;
-using EasyAbp.Abp.DynamicMenu.Web;
-using EasyAbp.Abp.DynamicPermission.Web;
-using EasyAbp.Abp.EntityUi.Web;
 using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla;
 using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling;
 using Microsoft.AspNetCore.Builder;
@@ -56,11 +52,11 @@ namespace Based.Web;
 [DependsOn(typeof(QuanLySangKienHttpApiModule))]
 [DependsOn(typeof(QuanLySangKienHttpApiClientModule))]
 
-[DependsOn(typeof(AbpEntityUiWebModule))]
-[DependsOn(typeof(AbpEntityUiDynamicEntityWebModule))]
-[DependsOn(typeof(AbpDynamicMenuWebModule))]
-[DependsOn(typeof(AbpDynamicEntityWebModule))]
-[DependsOn(typeof(AbpDynamicPermissionWebModule))]
+//[DependsOn(typeof(AbpEntityUiWebModule))]
+//[DependsOn(typeof(AbpEntityUiDynamicEntityWebModule))]
+//[DependsOn(typeof(AbpDynamicMenuWebModule))]
+//[DependsOn(typeof(AbpDynamicEntityWebModule))]
+//[DependsOn(typeof(AbpDynamicPermissionWebModule))]
 
 public class BasedWebModule : AbpModule
 {

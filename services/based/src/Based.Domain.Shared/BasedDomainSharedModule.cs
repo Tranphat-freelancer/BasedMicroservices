@@ -1,9 +1,4 @@
 ﻿using Based.Localization;
-using EasyAbp.Abp.DynamicEntity;
-using EasyAbp.Abp.DynamicMenu;
-using EasyAbp.Abp.DynamicPermission;
-using EasyAbp.Abp.EntityUi;
-using EasyAbp.Abp.EntityUi.DynamicEntity;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
 using Volo.Abp.FeatureManagement;
@@ -21,12 +16,6 @@ using Volo.Abp.VirtualFileSystem;
 namespace Based;
 
 [DependsOn(
-    typeof(AbpEntityUiDomainSharedModule),
-    typeof(AbpEntityUiDynamicEntityDomainSharedModule),
-    typeof(AbpDynamicMenuDomainSharedModule),
-    typeof(AbpDynamicEntityDomainSharedModule),
-    typeof(AbpDynamicPermissionDomainSharedModule),
-
     typeof(AbpAuditLoggingDomainSharedModule),
     typeof(AbpBackgroundJobsDomainSharedModule),
     typeof(AbpFeatureManagementDomainSharedModule),
@@ -36,6 +25,11 @@ namespace Based;
     typeof(AbpSettingManagementDomainSharedModule),
     typeof(AbpTenantManagementDomainSharedModule)
     )]
+//[DependsOn(typeof(AbpEntityUiDomainSharedModule))]
+//[DependsOn(typeof(AbpEntityUiDynamicEntityDomainSharedModule))]
+//[DependsOn(typeof(AbpDynamicMenuDomainSharedModule))]
+//[DependsOn(typeof(AbpDynamicEntityDomainSharedModule))]
+//[DependsOn(typeof(AbpDynamicPermissionDomainSharedModule))]
 public class BasedDomainSharedModule : AbpModule
 {
     public override void PreConfigureServices(ServiceConfigurationContext context)

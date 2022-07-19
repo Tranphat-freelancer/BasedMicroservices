@@ -1,8 +1,5 @@
-﻿using EasyAbp.Abp.DynamicEntity;
-using EasyAbp.Abp.DynamicMenu;
-using EasyAbp.Abp.DynamicPermission;
+﻿using Based.Localization;
 using Localization.Resources.AbpUi;
-using Based.Localization;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -11,15 +8,10 @@ using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement.HttpApi;
 using Volo.Abp.SettingManagement;
 using Volo.Abp.TenantManagement;
-using EasyAbp.Abp.EntityUi;
 
 namespace Based;
 
 [DependsOn(
-    typeof(AbpEntityUiHttpApiModule),
-    typeof(AbpDynamicMenuHttpApiModule),
-    typeof(AbpDynamicEntityHttpApiModule),
-    typeof(AbpDynamicPermissionHttpApiModule),
     typeof(BasedApplicationContractsModule),
     typeof(AbpAccountHttpApiModule),
     typeof(AbpIdentityHttpApiModule),
@@ -28,6 +20,11 @@ namespace Based;
     typeof(AbpFeatureManagementHttpApiModule),
     typeof(AbpSettingManagementHttpApiModule)
     )]
+//[DependsOn(typeof(AbpEntityUiHttpApiModule))]
+//[DependsOn(typeof(AbpDynamicMenuHttpApiModule))]
+//[DependsOn(typeof(AbpDynamicEntityHttpApiModule))]
+//[DependsOn(typeof(AbpDynamicPermissionHttpApiModule))]
+
 public class BasedHttpApiModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

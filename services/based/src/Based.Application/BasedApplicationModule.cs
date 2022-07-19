@@ -1,8 +1,4 @@
-﻿using EasyAbp.Abp.DynamicEntity;
-using EasyAbp.Abp.DynamicMenu;
-using EasyAbp.Abp.DynamicPermission;
-using EasyAbp.Abp.EntityUi;
-using Volo.Abp.Account;
+﻿using Volo.Abp.Account;
 using Volo.Abp.AutoMapper;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -14,10 +10,6 @@ using Volo.Abp.TenantManagement;
 namespace Based;
 
 [DependsOn(
-    typeof(AbpEntityUiApplicationModule),
-    typeof(AbpDynamicMenuApplicationModule),
-    typeof(AbpDynamicEntityApplicationModule),
-    typeof(AbpDynamicPermissionApplicationModule),
     typeof(BasedDomainModule),
     typeof(AbpAccountApplicationModule),
     typeof(BasedApplicationContractsModule),
@@ -27,6 +19,10 @@ namespace Based;
     typeof(AbpFeatureManagementApplicationModule),
     typeof(AbpSettingManagementApplicationModule)
     )]
+//[DependsOn(typeof(AbpEntityUiApplicationModule))]
+//[DependsOn(typeof(AbpDynamicMenuApplicationModule))]
+//[DependsOn(typeof(AbpDynamicEntityApplicationModule))]
+//[DependsOn(typeof(AbpDynamicPermissionApplicationModule))]
 public class BasedApplicationModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)

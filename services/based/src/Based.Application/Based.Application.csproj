@@ -15,10 +15,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EasyAbp.Abp.EntityUi.Application" Version="0.5.3" />
+		<!--<PackageReference Include="EasyAbp.Abp.EntityUi.Application" Version="0.5.3" />
 		<PackageReference Include="EasyAbp.Abp.DynamicMenu.Application" Version="0.4.2" />
 		<PackageReference Include="EasyAbp.Abp.DynamicEntity.Application" Version="0.5.6" />
-		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Application" Version="0.2.2" />
+		<PackageReference Include="EasyAbp.Abp.DynamicPermission.Application" Version="0.2.2" />-->
 	</ItemGroup>
 
 	<ItemGroup>

@@ -12,10 +12,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="EasyAbp.Abp.EntityUi.HttpApi" Version="0.5.3" />
+		<!--<PackageReference Include="EasyAbp.Abp.EntityUi.HttpApi" Version="0.5.3" />
 		<PackageReference Include="EasyAbp.Abp.DynamicMenu.HttpApi" Version="0.4.2" />
 		<PackageReference Include="EasyAbp.Abp.DynamicEntity.HttpApi" Version="0.5.6" />
-		<PackageReference Include="EasyAbp.Abp.DynamicPermission.HttpApi" Version="0.2.2" />
+		<PackageReference Include="EasyAbp.Abp.DynamicPermission.HttpApi" Version="0.2.2" />-->
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Volo.Abp.Account.HttpApi" Version="5.3.2" />

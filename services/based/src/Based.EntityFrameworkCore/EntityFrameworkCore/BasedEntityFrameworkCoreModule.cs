@@ -1,7 +1,3 @@
-using EasyAbp.Abp.DynamicEntity.EntityFrameworkCore;
-using EasyAbp.Abp.DynamicMenu.EntityFrameworkCore;
-using EasyAbp.Abp.DynamicPermission.EntityFrameworkCore;
-using EasyAbp.Abp.EntityUi.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.AuditLogging.EntityFrameworkCore;
 using Volo.Abp.BackgroundJobs.EntityFrameworkCore;
@@ -19,10 +15,6 @@ namespace Based.EntityFrameworkCore;
 
 [DependsOn(
     typeof(BasedDomainModule),
-    typeof(AbpEntityUiEntityFrameworkCoreModule),
-    typeof(AbpDynamicMenuEntityFrameworkCoreModule),
-    typeof(AbpDynamicEntityEntityFrameworkCoreModule),
-    typeof(AbpDynamicPermissionEntityFrameworkCoreModule),
     typeof(AbpIdentityEntityFrameworkCoreModule),
     typeof(AbpIdentityServerEntityFrameworkCoreModule),
     typeof(AbpPermissionManagementEntityFrameworkCoreModule),
@@ -33,6 +25,10 @@ namespace Based.EntityFrameworkCore;
     typeof(AbpTenantManagementEntityFrameworkCoreModule),
     typeof(AbpFeatureManagementEntityFrameworkCoreModule)
     )]
+//[DependsOn(typeof(AbpEntityUiEntityFrameworkCoreModule))]
+//[DependsOn(typeof(AbpDynamicMenuEntityFrameworkCoreModule))]
+//[DependsOn(typeof(AbpDynamicEntityEntityFrameworkCoreModule))]
+//[DependsOn(typeof(AbpDynamicPermissionEntityFrameworkCoreModule))]
 public class BasedEntityFrameworkCoreModule : AbpModule
 {
 

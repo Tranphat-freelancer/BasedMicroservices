@@ -1,8 +1,4 @@
-﻿using EasyAbp.Abp.DynamicEntity;
-using EasyAbp.Abp.DynamicMenu;
-using EasyAbp.Abp.DynamicPermission;
-using EasyAbp.Abp.EntityUi;
-using QuanLySangKien;
+﻿using QuanLySangKien;
 using Volo.Abp.Account;
 using Volo.Abp.FeatureManagement;
 using Volo.Abp.Identity;
@@ -15,10 +11,6 @@ using Volo.Abp.TenantManagement;
 namespace Based;
 
 [DependsOn(
-    typeof(AbpEntityUiApplicationContractsModule),
-    typeof(AbpDynamicMenuApplicationContractsModule),
-    typeof(AbpDynamicEntityApplicationContractsModule),
-    typeof(AbpDynamicPermissionApplicationContractsModule),
     typeof(BasedDomainSharedModule),
     typeof(AbpAccountApplicationContractsModule),
     typeof(AbpFeatureManagementApplicationContractsModule),
@@ -28,6 +20,11 @@ namespace Based;
     typeof(AbpTenantManagementApplicationContractsModule),
     typeof(AbpObjectExtendingModule)
 )]
+
+//[DependsOn(typeof(AbpEntityUiApplicationContractsModule))]
+//[DependsOn(typeof(AbpDynamicMenuApplicationContractsModule))]
+//[DependsOn(typeof(AbpDynamicEntityApplicationContractsModule))]
+//[DependsOn(typeof(AbpDynamicPermissionApplicationContractsModule))]
 [DependsOn(typeof(QuanLySangKienApplicationContractsModule))]
 
 public class BasedApplicationContractsModule : AbpModule

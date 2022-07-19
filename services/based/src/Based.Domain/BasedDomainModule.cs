@@ -1,10 +1,4 @@
-﻿using EasyAbp.Abp.DynamicEntity;
-using EasyAbp.Abp.DynamicMenu;
-using EasyAbp.Abp.DynamicPermission;
-using EasyAbp.Abp.EntityUi;
-using EasyAbp.Abp.EntityUi.DynamicEntity;
-using EasyAbp.Abp.EntityUi.Options;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Volo.Abp.AuditLogging;
 using Volo.Abp.BackgroundJobs;
@@ -21,11 +15,6 @@ using Volo.Abp.TenantManagement;
 namespace Based;
 
 [DependsOn(
-    typeof(AbpEntityUiDomainModule),
-    typeof(AbpEntityUiDynamicEntityDomainModule),
-    typeof(AbpDynamicMenuDomainModule),
-    typeof(AbpDynamicEntityDomainModule),
-    typeof(AbpDynamicPermissionDomainModule),
     typeof(BasedDomainSharedModule),
     typeof(AbpAuditLoggingDomainModule),
     typeof(AbpBackgroundJobsDomainModule),
@@ -38,6 +27,11 @@ namespace Based;
     typeof(AbpTenantManagementDomainModule),
     typeof(AbpEmailingModule)
 )]
+//[DependsOn(typeof(AbpEntityUiDomainModule))]
+//[DependsOn(typeof(AbpEntityUiDynamicEntityDomainModule))]
+//[DependsOn(typeof(AbpDynamicMenuDomainModule))]
+//[DependsOn(typeof(AbpDynamicEntityDomainModule))]
+//[DependsOn(typeof(AbpDynamicPermissionDomainModule))]
 public class BasedDomainModule : AbpModule
 {
     public override void ConfigureServices(ServiceConfigurationContext context)
