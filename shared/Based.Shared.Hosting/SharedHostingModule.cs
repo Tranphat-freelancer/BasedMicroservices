@@ -34,11 +34,6 @@ public class SharedHostingModule : AbpModule
             options.UseSqlServer();
         });
 
-        Configure<AbpMultiTenancyOptions>(options =>
-        {
-            options.IsEnabled = MultiTenancyConsts.IsEnabled;
-        });
-
         Configure<AbpDbConnectionOptions>(options =>
         {
             options.Databases.Configure("Based", database =>
