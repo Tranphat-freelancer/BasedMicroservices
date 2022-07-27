@@ -1,7 +1,6 @@
 using Based.Localization;
-using Based.Shared.Hosting;
+using Based.Shared.Microservices;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using QuanLySangKien.Permissions;
 using System;
 using System.Threading.Tasks;
@@ -11,7 +10,6 @@ using Volo.Abp.Identity.Web.Navigation;
 using Volo.Abp.SettingManagement.Web.Navigation;
 using Volo.Abp.TenantManagement.Web.Navigation;
 using Volo.Abp.UI.Navigation;
-using Volo.Abp.Users;
 
 namespace Based.Web.Menus;
 

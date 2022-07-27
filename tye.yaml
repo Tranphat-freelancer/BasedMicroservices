@@ -6,23 +6,28 @@
 #
 name: based
 services:
-# - name: based-publicgateway
-#   project: gateway/Based.Gateway/Based.PublicGateway.csproj
-#   bindings:
-#     - protocol: https
-#       port: 55555
-#- name: based-httpapi-host
-#  project: services/based/host/Based.HttpApi.Host/Based.HttpApi.Host.csproj
-#  bindings:
-#    - protocol: https
-#      port: 7004
+ #- name: based-publicgateway
+ #  project: gateway/Based.Gateway/Based.PublicGateway.csproj
+ #  bindings:
+ #    - protocol: https
+ #      port: 55555
+ - name: based-httpapi-host
+   project: services/based/host/Based.HttpApi.Host/Based.HttpApi.Host.csproj
+   bindings:
+    - protocol: https
+      port: 7004
+ - name: quanlysangkien-httpapi-host
+   project: services/quanlysangkien/host/QuanLySangKien.HttpApi.Host/QuanLySangKien.HttpApi.Host.csproj
+   bindings:
+    - protocol: https
+      port: 7005
 # - name: based-web
 #   project: apps/Based.Web/Based.Web.csproj
 #   bindings:
 #     - protocol: https
 #       port: 44344
-- name: based-identityserver
-  project: apps/Based.IdentityServer/Based.IdentityServer.csproj
-  bindings:
-    - protocol: https
-      port: 5000
+ #- name: based-identityserver
+ #  project: apps/Based.IdentityServer/Based.IdentityServer.csproj
+ #  bindings:
+ #   - protocol: https
+ #     port: 5000
