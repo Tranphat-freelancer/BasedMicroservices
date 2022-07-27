@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Localization" Version="5.3.3" />
-    <PackageReference Include="Volo.Abp.UI" Version="5.3.3" />
     <PackageReference Include="Volo.Abp.Validation" Version="5.3.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\services\based\src\Based.Domain.Shared\Based.Domain.Shared.csproj" />
+    <ProjectReference Include="..\..\services\quanlysangkien\src\QuanLySangKien.Domain.Shared\QuanLySangKien.Domain.Shared.csproj" />
   </ItemGroup>
 
 </Project>

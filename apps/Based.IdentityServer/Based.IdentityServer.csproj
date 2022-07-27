@@ -40,7 +40,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\..\services\based\src\Based.EntityFrameworkCore\Based.EntityFrameworkCore.csproj" />
 		<ProjectReference Include="..\..\shared\Based.Shared.Hosting\Based.Shared.Hosting.csproj" />
-		<ProjectReference Include="..\..\shared\Based.Shared.Microservices\Based.Shared.Microservices.csproj" />
+		<ProjectReference Include="..\..\shared\Based.Shared.Microservices\Based.Shared.Hosting.Microservices.csproj" />
 		<ProjectReference Include="..\..\themes\Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla\src\Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.csproj" />
 	</ItemGroup>
 

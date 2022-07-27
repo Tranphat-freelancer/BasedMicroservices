@@ -1,4 +1,4 @@
-﻿namespace Based.Shared.Microservices;
+﻿namespace Based.Shared.Hosting.Microservices;
 
 public static class MultiTenancyConsts
 {

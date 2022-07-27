@@ -1,6 +1,6 @@
 using Based.Localization;
 using Based.Shared.Hosting;
-using Based.Shared.Microservices;
+using Based.Shared.Hosting.Microservices;
 using Based.Web.Menus;
 using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla;
 using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling;

@@ -1,6 +1,6 @@
 ﻿using Volo.Abp.Reflection;
 
-namespace QuanLySangKien.Permissions;
+namespace QuanLySangKien.Features;
 
 public class QuanLySangKienFeatures
 {

@@ -1,5 +1,5 @@
 ﻿using Based.EntityFrameworkCore;
-using Based.Shared.Microservices;
+using Based.Shared.Hosting.Microservices;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors;

@@ -4,7 +4,7 @@ using Volo.Abp.Features;
 using Volo.Abp.Localization;
 using Volo.Abp.Validation.StringValues;
 
-namespace QuanLySangKien.Permissions;
+namespace QuanLySangKien.Features;
 
 public class QuanLySangKienFeaturesDefinitionProvider : FeatureDefinitionProvider
 {

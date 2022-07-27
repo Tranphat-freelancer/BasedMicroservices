@@ -32,11 +32,11 @@ namespace Based;
 //[DependsOn(typeof(AbpDynamicPermissionDomainSharedModule))]
 public class BasedDomainSharedModule : AbpModule
 {
-    public override void PreConfigureServices(ServiceConfigurationContext context)
-    {
-        BasedGlobalFeatureConfigurator.Configure();
-        BasedModuleExtensionConfigurator.Configure();
-    }
+    //public override void PreConfigureServices(ServiceConfigurationContext context)
+    //{
+    //    BasedGlobalFeatureConfigurator.Configure();
+    //    BasedModuleExtensionConfigurator.Configure();
+    //}
 
     public override void ConfigureServices(ServiceConfigurationContext context)
     {

@@ -1,5 +1,5 @@
 using Based.Localization;
-using Based.Shared.Microservices;
+using Based.Shared.Hosting.Microservices;
 using Microsoft.Extensions.Configuration;
 using QuanLySangKien.Permissions;
 using System;
